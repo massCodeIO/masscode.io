@@ -2,6 +2,7 @@ import { gitHubApi } from '@/services/github'
 
 export const state = () => ({
   github: 'https://github.com/antonreshetov/massCode',
+  version: '',
   downloadLinks: {
     mac: '',
     win: '',
@@ -12,6 +13,9 @@ export const state = () => ({
 export const mutations = {
   SET_DOWNLOAD_LINKS (state, links) {
     state.downloadLinks = links
+  },
+  SET_VERSION (state, version) {
+    state.version = version
   }
 }
 
@@ -35,6 +39,7 @@ export const actions = {
       }
 
       commit('SET_DOWNLOAD_LINKS', links)
+      commit('SET_VERSION', tagName)
     }
   }
 }

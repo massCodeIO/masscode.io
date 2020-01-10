@@ -11,7 +11,7 @@
         <div class="meta">
           <a :href="$store.state.github">View on GitHub</a>
           <div class="version">
-            Current v0.3.4 (unstable)
+            Current {{ $store.state.version }} (unstable)
           </div>
         </div>
       </div>
