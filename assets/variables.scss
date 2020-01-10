@@ -1,0 +1,15 @@
+:root {
+  // Colors
+  --color-primary: hsl(213, 81%, 67%);
+  --color-primary-hover: hsl(213, 50%, 56%);
+
+  --color-contrast-lower: hsl(0, 0%, 97%);
+  --color-contrast-low: hsl(0, 0%, 85%);
+  --color-contrast-medium: hsl(0, 0%, 50%);
+  --color-contrast-high: hsl(0, 0%, 15%);
+  --color-contrast-higher: hsl(0, 0%, 0%);
+
+  --color-text: var(--color-contrast-high);
+  // Dimensions
+  --sm: 768px;
+}
