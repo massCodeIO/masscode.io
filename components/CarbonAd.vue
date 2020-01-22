@@ -99,8 +99,9 @@ export default {
   .carbon {
     position: relative;
     float: none;
-    margin: 20px 0;
     max-width: 330px;
+    margin: 0 auto;
+    margin-top: 20px;
   }
 
   .carbon-wrap {

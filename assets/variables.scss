@@ -1,8 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
 :root {
   // Colors
   --color-primary: hsl(213, 81%, 67%);
-  --color-primary-hover: hsl(213, 50%, 56%);
+  --color-primary-hover: hsl(213, 50%, 50%);
 
+  --color-bg: hsl(0, 0%, 100%);
   --color-contrast-lower: hsl(0, 0%, 97%);
   --color-contrast-low: hsl(0, 0%, 85%);
   --color-contrast-medium: hsl(0, 0%, 50%);
@@ -10,6 +14,39 @@
   --color-contrast-higher: hsl(0, 0%, 0%);
 
   --color-text: var(--color-contrast-high);
-  // Dimensions
-  --sm: 768px;
+
+  // Fonts
+  --text-base-size: 10px;
+  --text-xs: calc(var(--text-base-size) * 1.2);
+  --text-sm: calc(var(--text-base-size) * 1.4);
+  --text-md: calc(var(--text-base-size) * 1.6);
+  --text-lg: calc(var(--text-base-size) * 1.8);
+  --text-xl: calc(var(--text-base-size) * 2.4);
+  --text-xxl: calc(var(--text-base-size) * 3.6);
+  --text-xxxl: calc(var(--text-base-size) * 4.8);
+
+  // Spacing
+  --spacing-unit: 4px;
+  --spacing-xs: calc(var(--spacing-unit) * 2);
+  --spacing-sm: calc(var(--spacing-unit) * 4);
+  --spacing-md: calc(var(--spacing-unit) * 6);
+  --spacing-lg: calc(var(--spacing-unit) * 8);
+  --spacing-xl: calc(var(--spacing-unit) * 10);
+  --spacing-xxl: calc(var(--spacing-unit) * 12);
+  --spacing-xxxl: calc(var(--spacing-unit) * 14);
 }
+
+
+[data-theme="dark"] {
+  --color-bg: hsl(0, 0%, 14%);
+  --color-contrast-lower: hsl(0, 0%, 25%);
+  --color-contrast-low: hsl(0, 0%, 32%);
+  --color-contrast-medium: hsl(0, 0%, 50%);
+  --color-contrast-high: hsl(0, 0%, 85%);
+  --color-contrast-higher: hsl(0, 0%, 100%);
+
+  --color-text: var(--color-contrast-high);
+  --color-border: var(--color-contrast-low);
+
+  --color-text: var(--color-contrast-high);
+} 

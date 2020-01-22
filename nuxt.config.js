@@ -1,9 +1,11 @@
 require('dotenv').config()
+
 export default {
   mode: 'universal',
   /*
    ** Headers of the page
    */
+
   head: {
     title:
       'massCode - A free and open source code snippets manager for developers',
@@ -14,9 +16,22 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'massCode - A free and open source code snippets manager for developers.'
+          'Code snippets manager for developers, developed using web technologies.'
       },
-      { lang: 'en' }
+      { lang: 'en' },
+      { name: 'google-site-verification', content: 'h-rU1tSutO83wOyvi4syrk_XTvgennlUPkL6fMmq5cI' },
+      // FB
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://masscode.io' },
+      { property: 'og:title', content: 'massCode - A free and open source code snippets manager for developers.' },
+      { property: 'og:description', content: 'A free and open source code snippets manager for developers.' },
+      { property: 'og:image', content: 'https://masscode.io/og.png' },
+      // Twitter
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:url', content: 'https://masscode.io' },
+      { property: 'twitter:title', content: 'massCode - A free and open source code snippets manager for developers.' },
+      { property: 'twitter:description', content: 'A free and open source code snippets manager for developers.' },
+      { property: 'twitter:image', content: 'https://masscode.io/og.png' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
   },

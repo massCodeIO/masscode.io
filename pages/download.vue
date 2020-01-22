@@ -2,13 +2,14 @@
   <div class="page all-platforms">
     <div class="all-platforms__inner">
       <h1>Select your platform</h1>
+      <h3>Current {{ $store.state.version }}</h3>
       <div class="platforms">
         <div class="platform">
           <a
             :href="$store.state.downloadLinks.mac"
             download
           >
-            <button class="button button--filled">Download for Mac</button>
+            <AppButton>Download for Mac</AppButton>
           </a>
           <div class="desc">
             macOS 10.13+
@@ -19,7 +20,7 @@
             :href="$store.state.downloadLinks.win"
             download
           >
-            <button class="button button--filled">Download for Windows</button>
+            <AppButton>Download for Windows</AppButton>
           </a>
           <div class="desc">
             Windows 7, 8, 10
@@ -30,7 +31,7 @@
             :href="$store.state.downloadLinks.linux"
             download
           >
-            <button class="button button--filled">Download for Linux</button>
+            <AppButton>Download for Linux</AppButton>
           </a>
           <div class="desc">
             Ubuntu
@@ -39,17 +40,39 @@
       </div>
       <div class="warning">
         <div class="desc">
-          Exclusively for introductory purposes. Please do not use as a primary
-          tool until the stable build.
+          Please do not use as a primary tool until the stable build.
         </div>
       </div>
+      <CarbonAd />
     </div>
   </div>
 </template>
 
 <script>
+import CarbonAd from '@/components/CarbonAd.vue'
+import AppButton from '@/components/AppButton.vue'
+
 export default {
-  name: 'AllPlatformsPage',
+  name: 'Download',
+
+  components: {
+    CarbonAd,
+    AppButton
+  },
+
+  head () {
+    return {
+      title: 'Download for Mac, Window and Linux',
+      titleTemplate: '%s - massCode',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Download massCode for Mac, Window and Linux'
+        }
+      ]
+    }
+  },
 
   data () {
     return {}
@@ -64,16 +87,26 @@ export default {
 <style lang="scss" scoped>
 .all-platforms {
   display: flex;
-  height: calc(100vh - 80px);
   align-items: center;
-
+  text-align: center;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
 }
 .platforms {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 667px) {
+    display: flex;
+    flex-flow: column;
+  }
   .platform {
     margin: 0 24px;
+    @media (max-width: 667px) {
+      margin-bottom: 14px;
+    }
     .desc {
       margin-top: 10px;
     }

@@ -7,7 +7,9 @@ export const state = () => ({
     mac: '',
     win: '',
     linux: ''
-  }
+  },
+  downloads: null,
+  stars: null
 })
 
 export const mutations = {
@@ -16,11 +18,17 @@ export const mutations = {
   },
   SET_VERSION (state, version) {
     state.version = version
+  },
+  SET_DOWNLOADS (state, downloads) {
+    state.downloads = downloads
+  },
+  SET_STARS (state, stars) {
+    state.stars = stars
   }
 }
 
 export const actions = {
-  async nuxtServerInit ({ commit }) {
+  async getGithubTags ({ commit }) {
     const res = await gitHubApi.get('/repos/antonreshetov/massCode/tags')
 
     if (res.data && res.data[0]) {
@@ -41,6 +49,25 @@ export const actions = {
       commit('SET_DOWNLOAD_LINKS', links)
       commit('SET_VERSION', tagName)
     }
+  },
+  async getGitHubStats ({ commit }) {
+    try {
+      const { data: releases } = await gitHubApi.get('/repos/antonreshetov/massCode/releases')
+      const { data: { stargazers_count: stars } } = await gitHubApi.get('/repos/antonreshetov/massCode')
+
+      const downloads = releases.reduce((total, release) => {
+        total += release.assets.reduce((count, asset) => {
+          count += asset.download_count
+          return count
+        }, 0)
+        return total
+      }, 0)
+      commit('SET_DOWNLOADS', downloads)
+      commit('SET_STARS', stars)
+    } catch (err) {}
+  },
+  async nuxtServerInit ({ dispatch }) {
+    await dispatch('getGithubTags')
   }
 }
 

@@ -1,37 +1,31 @@
 <template>
-  <div class="wrapper">
-    <div class="header">
-      <div class="header__inner">
-        <NuxtLink to="/">
-          <div class="logo">
-            <img
-              src="/logo.png"
-              alt="logo"
-            >
-            <span>massCode</span>
-          </div>
-        </NuxtLink>
-        <div class="download">
-          <a
-            :href="downloadLink"
-            download
-          >
-            <button
-              class="button"
-              @click="onDownload"
-            >
-              Download for {{ os }}
-            </button>
-          </a>
-          <div class="desc">
-            <NuxtLink to="/all-platforms">
-              Other platforms
-            </NuxtLink>
-          </div>
+  <div
+    class="default"
+    data-theme="dark"
+  >
+    <div class="wrapper">
+      <div class="header">
+        <div class="header__inner">
+          <NuxtLink to="/">
+            <div class="logo">
+              <img
+                src="/logo.png"
+                alt="logo"
+              >
+              <span>massCode</span>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
+      <div class="content">
+        <Nuxt />
+      </div>
+      <div class="footer">
+        <div class="copyright">
+          © 2019-{{ year }} Anton Reshetov
         </div>
       </div>
     </div>
-    <Nuxt />
   </div>
 </template>
 
@@ -40,7 +34,8 @@ export default {
   data () {
     return {
       os: null,
-      downloadLink: null
+      downloadLink: null,
+      year: new Date().getFullYear()
     }
   },
 
@@ -80,9 +75,21 @@ export default {
 
 <style lang="scss">
 @import '~/assets/main';
+
+.default {
+  background-color: var(--color-bg);
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
 }
 
 .header {
@@ -97,6 +104,19 @@ export default {
   }
 }
 
+.footer {
+  margin-top: var(--spacing-lg);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .copyright {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-contrast-medium);
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -108,14 +128,6 @@ export default {
   span {
     font-size: 16px;
     font-weight: 600;
-  }
-}
-
-.download {
-  .desc {
-    margin-top: 4px;
-    font-weight: 500;
-    text-align: center;
   }
 }
 </style>
