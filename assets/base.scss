@@ -101,6 +101,7 @@ section {
 }
 
 .page {
+  width: 100%;
   h1 {
     @media (max-width: 768px) {
       margin-top: var(--spacing-xl);

@@ -89,6 +89,7 @@ export default {
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   margin: 0 auto;
   @media (max-width: 768px) {
     align-items: flex-start;

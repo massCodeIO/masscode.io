@@ -79,6 +79,7 @@ export default {
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   margin: 0 auto;
   &__desc {
     max-width: 600px;
