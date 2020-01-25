@@ -46,12 +46,22 @@
             Downloads: {{ $store.state.downloads }} | Stars: {{ $store.state.stars }}
           </div>
         </div>
-
-        <div class="preview">
-          <img
-            src="/preview.png"
-            alt="preview"
-          >
+        <div class="ph">
+          <a
+            href="https://www.producthunt.com/posts/masscode?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-code-snippets-manager-for-developers"
+            target="_blank"
+          ><img
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=181520&theme=dark"
+            alt="Code snippets manager for developers - A free and open source code snippets manager for developers. | Product Hunt Embed"
+            style="height: 40px;"
+            height="40px"
+          ></a>
+          <div class="preview">
+            <img
+              src="/preview.png"
+              alt="preview"
+            >
+          </div>
         </div>
       </section>
       <section class="section-2">
