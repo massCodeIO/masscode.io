@@ -31,7 +31,11 @@
             href="https://emmet.io"
             target="_blank"
             rel="noopener noreferrer"
-          >Emmet</a>.
+          >Emmet</a> and <a
+            href="https://prettier.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Prettier</a> to code formatter.
         </p>
       </div>
     </div>
