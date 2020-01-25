@@ -1,4 +1,5 @@
 import { gitHubApi } from '@/services/github'
+import { format } from 'date-fns'
 
 export const state = () => ({
   github: 'https://github.com/antonreshetov/massCode',
@@ -9,7 +10,8 @@ export const state = () => ({
     linux: ''
   },
   downloads: null,
-  stars: null
+  stars: null,
+  releases: null
 })
 
 export const mutations = {
@@ -24,18 +26,23 @@ export const mutations = {
   },
   SET_STARS (state, stars) {
     state.stars = stars
+  },
+  SET_RELEASES (state, releases) {
+    state.releases = releases
   }
 }
 
 export const actions = {
   async getGithubTags ({ commit }) {
-    const res = await gitHubApi.get('/repos/antonreshetov/massCode/tags')
+    const { data: releases } = await gitHubApi.get(
+      '/repos/antonreshetov/massCode/releases'
+    )
 
-    if (res.data && res.data[0]) {
-      const tagName = res.data[0].name
-      const tagNumber = res.data[0].name.substring(1)
+    if (releases && releases[0]) {
+      const tagName = releases[0].tag_name
+      const tagNumber = tagName.substring(1)
 
-      const macAsset = `massCode-${tagNumber}-mac.zip`
+      const macAsset = `massCode-${tagNumber}.dmg`
       const winAsset = `massCode.Setup.${tagNumber}.exe`
       const linuxAsset = `massCode-${tagNumber}.AppImage`
       const downloadUrl = `https://github.com/antonreshetov/massCode/releases/download/${tagName}`
@@ -48,13 +55,30 @@ export const actions = {
 
       commit('SET_DOWNLOAD_LINKS', links)
       commit('SET_VERSION', tagName)
+
+      const releasesV1 = releases
+        .filter(i => i.tag_name.includes('v1.'))
+        .map(i => {
+          return {
+            name: i.name,
+            tagName: i.tag_name,
+            date: i.published_at,
+            dateView: format(new Date(i.published_at), 'MMMM dd, yyyy'),
+            url: i.html_url,
+            body: i.body
+          }
+        })
+      commit('SET_RELEASES', releasesV1)
     }
   },
   async getGitHubStats ({ commit }) {
     try {
-      const { data: releases } = await gitHubApi.get('/repos/antonreshetov/massCode/releases')
-      const { data: { stargazers_count: stars } } = await gitHubApi.get('/repos/antonreshetov/massCode')
-
+      const { data: releases } = await gitHubApi.get(
+        '/repos/antonreshetov/massCode/releases'
+      )
+      const {
+        data: { stargazers_count: stars }
+      } = await gitHubApi.get('/repos/antonreshetov/massCode')
       const downloads = releases.reduce((total, release) => {
         total += release.assets.reduce((count, asset) => {
           count += asset.download_count
