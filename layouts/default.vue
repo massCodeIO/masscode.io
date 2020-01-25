@@ -15,6 +15,11 @@
               <span>massCode</span>
             </div>
           </NuxtLink>
+          <div class="header__menu">
+            <NuxtLink to="/releases">
+              Releases
+            </NuxtLink>
+          </div>
         </div>
       </div>
       <div class="content">
@@ -101,6 +106,17 @@ export default {
     margin-top: 20px;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+  }
+  &__menu {
+    a {
+      color: var(--color-text);
+      display: inline-block;
+      margin-left: var(--spacing-xs);
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 }
 
