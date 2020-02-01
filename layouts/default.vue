@@ -16,6 +16,9 @@
             </div>
           </NuxtLink>
           <div class="header__menu">
+            <a href="https://masscode.io/documentation">
+              Documentation
+            </a>
             <NuxtLink to="/releases">
               Releases
             </NuxtLink>
@@ -112,7 +115,7 @@ export default {
     a {
       color: var(--color-text);
       display: inline-block;
-      margin-left: var(--spacing-xs);
+      margin-left: var(--spacing-sm);
       &:first-child {
         margin-left: 0;
       }
