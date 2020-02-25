@@ -12,11 +12,20 @@
         <div class="donate__actions">
           <div class="donate__button">
             <a
+              href="https://opencollective.com/masscode"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AppButton>Become a backer or sponsor on Open Collective</AppButton>
+            </a>
+          </div>
+          <div class="donate__button">
+            <a
               href="https://www.patreon.com/antonreshetov"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AppButton>Become a backer on Patreon</AppButton>
+              <AppButton>Become a backer or sponsor on Patreon</AppButton>
             </a>
           </div>
           <div class="donate__button">
@@ -86,14 +95,17 @@ export default {
     margin: 0 auto;
   }
   &__actions {
-    display: flex;
+    // display: flex;
     justify-content: center;
     @media (max-width: 667px) {
       flex-flow: column;
     }
   }
   &__button {
-    margin: 0 5px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &-share {
     span.share {
@@ -102,7 +114,7 @@ export default {
   }
   @media (max-width: 667px) {
     &__button {
-      margin-bottom: 14px;
+      // margin-bottom: 14px;
     }
   }
 }
