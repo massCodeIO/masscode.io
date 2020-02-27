@@ -38,11 +38,6 @@
           </div>
         </div>
       </div>
-      <div class="warning">
-        <div class="desc">
-          Please do not use as a primary tool until the stable build.
-        </div>
-      </div>
       <CarbonAd />
     </div>
   </div>
