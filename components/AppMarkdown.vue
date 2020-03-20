@@ -40,17 +40,32 @@ export default {
         }
       })
 
-      const re = /(#\d+)/g
-      let issue
+      const issueRe = /(#\d+)/g
+      const pullRe = /(\(#\d+\))/g
+      const userRe = /(@\w+)/g
+      let link
+      let replacer
+      let model = this.model
 
-      if (this.model.match(re)) {
-        issue = this.model.match(re)[0].substring(1)
+      if (model.match(issueRe)) {
+        link = model.match(issueRe)[0].substring(1)
+        replacer = `[$1](https://github.com/antonreshetov/massCode/issues/${link})`
+        model = model.replace(issueRe, replacer)
       }
 
-      const replacer = `[$1](https://github.com/antonreshetov/massCode/issues/${issue})`
-      const md = this.model.replace(re, replacer)
+      if (model.match(pullRe)) {
+        link = model.match(pullRe)[0].substring(1)
+        replacer = `[$1](https://github.com/antonreshetov/massCode/pull/${link}`
+        model = model.replace(pullRe, replacer)
+      }
 
-      this.result = this.md.render(md)
+      if (model.match(userRe)) {
+        link = model.match(userRe)[0].substring(1)
+        replacer = `[$1](https://github.com/${link})`
+        model = model.replace(userRe, replacer)
+      }
+
+      this.result = this.md.render(model)
     }
   }
 }
