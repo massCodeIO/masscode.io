@@ -141,7 +141,7 @@ export default {
   align-items: center;
   color: var(--color-text);
   img {
-    width: 40px;
+    width: 60px;
     margin-right: 10px;
   }
   span {
