@@ -20,7 +20,7 @@
     }
   },
   "dependencies": {
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "date-fns": "^2.9.0",
     "markdown-it": "^10.0.0",
     "markdown-it-link-attributes": "^3.0.0",
