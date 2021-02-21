@@ -41,18 +41,12 @@
 export default {
   data () {
     return {
-      os: null,
-      downloadLink: null,
       year: new Date().getFullYear()
     }
   },
 
   created () {
     this.$ga.page(this.$route)
-  },
-
-  mounted () {
-    this.getPlatform()
   },
 
   methods: {
@@ -62,20 +56,6 @@ export default {
         eventAction: 'Click',
         eventLabel: 'macOs'
       })
-    },
-    getPlatform () {
-      if (navigator.appVersion.includes('Mac')) {
-        this.os = 'Mac'
-        this.downloadLink = this.$store.state.downloadLinks.mac
-      }
-      if (navigator.appVersion.includes('Win')) {
-        this.os = 'Windows'
-        this.downloadLink = this.$store.state.downloadLinks.win
-      }
-      if (navigator.appVersion.includes('X11')) {
-        this.os = 'Linux'
-        this.downloadLink = this.$store.state.downloadLinks.linux
-      }
     }
   }
 }
