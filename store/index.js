@@ -51,7 +51,6 @@ export const actions = {
     )
     const releases = data.filter(i => !i.prerelease)
     const preReleases = data.filter(i => i.prerelease)
-    console.log(preReleases)
 
     function getDownloadLinks (releases) {
       const tagName = releases[0].tag_name
