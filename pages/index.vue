@@ -14,7 +14,7 @@
           <div class="buttons">
             <div class="download">
               <a
-                :href="downloadLink"
+                :href="downloadStableLink"
                 download
               >
                 <AppButton>Download for {{ os }}</AppButton>
@@ -27,6 +27,10 @@
             </NuxtLink>
           </div>
           <div class="other-platforms">
+            <a
+              :href="downloadBetaLink"
+              download=""
+            >Download Beta</a> |
             <NuxtLink to="/download">
               Other platforms
             </NuxtLink>
@@ -39,6 +43,8 @@
             >View on GitHub</a>
             |
             Current {{ $store.state.version }}
+            |
+            Beta {{ $store.state.versionBeta }}
           </div>
           <div
             class="desc"
@@ -102,7 +108,8 @@ export default {
   data () {
     return {
       os: null,
-      downloadLink: null
+      downloadStableLink: null,
+      downloadBetaLink: null
     }
   },
 
@@ -126,15 +133,18 @@ export default {
     getPlatform () {
       if (navigator.appVersion.includes('Mac')) {
         this.os = 'Mac'
-        this.downloadLink = this.$store.state.downloadLinks.mac
+        this.downloadStableLink = this.$store.state.downloadStableLinks.mac
+        this.downloadBetaLink = this.$store.state.downloadBetaLinks.mac
       }
       if (navigator.appVersion.includes('Win')) {
         this.os = 'Windows'
-        this.downloadLink = this.$store.state.downloadLinks.win
+        this.downloadStableLink = this.$store.state.downloadStableLinks.win
+        this.downloadBetaLink = this.$store.state.downloadBetaLinks.win
       }
       if (navigator.appVersion.includes('X11')) {
         this.os = 'Linux'
-        this.downloadLink = this.$store.state.downloadLinks.linux
+        this.downloadStableLink = this.$store.state.downloadStableLinks.linux
+        this.downloadBetaLink = this.$store.state.downloadStBetanks.linux
       }
     }
   }
@@ -187,6 +197,7 @@ section.section-1 {
   .other-platforms {
     margin: var(--spacing-sm) 0;
     font-size: var(--text-sm);
+    color: var(--color-contrast-medium);
   }
   .preview {
     @media (max-width: 768px) {

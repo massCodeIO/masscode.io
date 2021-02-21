@@ -4,7 +4,13 @@ import { format } from 'date-fns'
 export const state = () => ({
   github: 'https://github.com/antonreshetov/massCode',
   version: '',
-  downloadLinks: {
+  versionBeta: '',
+  downloadStableLinks: {
+    mac: '',
+    win: '',
+    linux: ''
+  },
+  downloadBetaLinks: {
     mac: '',
     win: '',
     linux: ''
@@ -15,11 +21,17 @@ export const state = () => ({
 })
 
 export const mutations = {
-  SET_DOWNLOAD_LINKS (state, links) {
-    state.downloadLinks = links
+  SET_DOWNLOAD_STABLE_LINKS (state, links) {
+    state.downloadStableLinks = links
   },
-  SET_VERSION (state, version) {
+  SET_DOWNLOAD_BETA_LINKS (state, links) {
+    state.downloadBetaLinks = links
+  },
+  SET_CURRENT_VERSION (state, version) {
     state.version = version
+  },
+  SET_BETA_VERSION (state, version) {
+    state.versionBeta = version
   },
   SET_DOWNLOADS (state, downloads) {
     state.downloads = downloads
@@ -34,11 +46,14 @@ export const mutations = {
 
 export const actions = {
   async getGithubTags ({ commit }) {
-    const { data: releases } = await gitHubApi.get(
+    const { data } = await gitHubApi.get(
       '/repos/antonreshetov/massCode/releases'
     )
+    const releases = data.filter(i => !i.prerelease)
+    const preReleases = data.filter(i => i.prerelease)
+    console.log(preReleases)
 
-    if (releases && releases[0]) {
+    function getDownloadLinks (releases) {
       const tagName = releases[0].tag_name
       const tagNumber = tagName.substring(1)
 
@@ -53,8 +68,15 @@ export const actions = {
         linux: `${downloadUrl}/${linuxAsset}`
       }
 
-      commit('SET_DOWNLOAD_LINKS', links)
-      commit('SET_VERSION', tagName)
+      return links
+    }
+
+    if (releases && releases.length) {
+      const links = getDownloadLinks(releases)
+      const tagName = releases[0].tag_name
+
+      commit('SET_DOWNLOAD_STABLE_LINKS', links)
+      commit('SET_CURRENT_VERSION', tagName)
 
       const releasesV1 = releases
         .filter(i => i.tag_name.includes('v1.'))
@@ -69,6 +91,14 @@ export const actions = {
           }
         })
       commit('SET_RELEASES', releasesV1)
+    }
+
+    if (preReleases && preReleases.length) {
+      const links = getDownloadLinks(preReleases)
+      const tagName = preReleases[0].tag_name
+
+      commit('SET_DOWNLOAD_BETA_LINKS', links)
+      commit('SET_BETA_VERSION', tagName)
     }
   },
   async getGitHubStats ({ commit }) {

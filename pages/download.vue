@@ -6,7 +6,7 @@
       <div class="platforms">
         <div class="platform">
           <a
-            :href="$store.state.downloadLinks.mac"
+            :href="$store.state.downloadStableLinks.mac"
             download
           >
             <AppButton>Download for Mac</AppButton>
@@ -17,7 +17,7 @@
         </div>
         <div class="platform">
           <a
-            :href="$store.state.downloadLinks.win"
+            :href="$store.state.downloadStableLinks.win"
             download
           >
             <AppButton>Download for Windows</AppButton>
@@ -28,10 +28,47 @@
         </div>
         <div class="platform">
           <a
-            :href="$store.state.downloadLinks.linux"
+            :href="$store.state.downloadStableLinks.linux"
             download
           >
             <AppButton>Download for Linux</AppButton>
+          </a>
+          <div class="desc">
+            Ubuntu
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <h3>Beta {{ $store.state.versionBeta }}</h3>
+      <div class="platforms">
+        <div class="platform">
+          <a
+            :href="$store.state.downloadBetaLinks.mac"
+            download
+          >
+            <AppButton plain>Download for Mac</AppButton>
+          </a>
+          <div class="desc">
+            macOS 10.13+
+          </div>
+        </div>
+        <div class="platform">
+          <a
+            :href="$store.state.downloadBetaLinks.win"
+            download
+          >
+            <AppButton plain>Download for Windows</AppButton>
+          </a>
+          <div class="desc">
+            Windows 7, 8, 10
+          </div>
+        </div>
+        <div class="platform">
+          <a
+            :href="$store.state.downloadBetaLinks.linux"
+            download
+          >
+            <AppButton plain>Download for Linux</AppButton>
           </a>
           <div class="desc">
             Ubuntu
