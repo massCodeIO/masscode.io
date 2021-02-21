@@ -22,7 +22,7 @@
             </div>
             <NuxtLink to="/donate">
               <AppButton plain>
-                Support massCode
+                Donate for massCode
               </AppButton>
             </NuxtLink>
           </div>
@@ -79,7 +79,7 @@
             class="main-donate"
             plain
           >
-            Support massCode
+            Donate for massCode
           </AppButton>
         </NuxtLink>
       </section>
