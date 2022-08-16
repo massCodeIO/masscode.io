@@ -28,7 +28,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Documentation', link: '/documentation/' },
-      { text: 'Releases', link: '/releases' },
+      { text: 'Releases', link: 'https://github.com/massCodeIO/massCode/releases/' },
       { text: 'Snippet Collection', link: '/snippets' },
       { text: 'Donate', link: '/donate' }
     ],
