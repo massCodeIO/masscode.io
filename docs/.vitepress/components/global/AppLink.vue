@@ -47,16 +47,26 @@ const component = computed(() => {
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .app-link {
   display: inline-flex;
   a {
     color: var(--vp-c-brand);
+    &:hover {
+        color: var(--vp-button-brand-hover-bg);
+      }
   }
 
   .icon {
     width: 12px;
     fill: var(--vp-c-gray-light-2);
+  }
+}
+.vp-doc {
+  &.custom-block {
+    a {
+      color: inherit;
+    }
   }
 }
 </style>
