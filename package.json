@@ -1,0 +1,40 @@
+{
+  "name": "masscode-io",
+  "version": "0.1.0",
+  "description": "Source code of masscode.io",
+  "author": {
+    "name": "Anton Reshetov",
+    "url": "https://github.com/antonreshetov"
+  },
+  "repository": "https://github.com/massCodeIO/masscode.io",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs --port 3001",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.26.1",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "eslint": "^8.22.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.5.0",
+    "sass": "^1.54.4",
+    "typescript": "^4.7.4",
+    "vitepress": "1.0.0-alpha.5",
+    "vue": "^3.2.37"
+  },
+  "volta": {
+    "node": "16.16.0"
+  }
+}

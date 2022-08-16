@@ -1,0 +1,16 @@
+{
+  "extends": "@antfu",
+  "rules": {
+    "vue/component-tags-order": "off",
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": {
+        "max": 1
+      },      
+      "multiline": {
+        "max": 1
+      }
+    }],
+    "@typescript-eslint/space-before-function-paren": ["error", "always"],
+    "@typescript-eslint/comma-dangle": ["error", "never"]
+  }
+}
