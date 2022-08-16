@@ -27,7 +27,7 @@ export default defineConfig({
     logo: '/logo-64w.png',
 
     nav: [
-      { text: 'Documentation', link: '/documentaion' },
+      { text: 'Documentation', link: '/documentation/' },
       { text: 'Releases', link: '/releases' },
       { text: 'Snippet Collection', link: '/snippets' },
       { text: 'Donate', link: '/donate' }
@@ -41,6 +41,33 @@ export default defineConfig({
     footer: {
       message: 'massCode released under the AGPL v3 License.<br>Snippet collection released under the CC-BY-4.0 License.',
       copyright: 'Copyright © 2019-present Anton Reshetov'
+    },
+
+    sidebar: {
+      '/documentation/': [
+        {
+          text: 'Essentials',
+          items: [
+            { text: 'Layout', link: '/documentation/' },
+            { text: 'Library', link: '/documentation/library' },
+            { text: 'Folders', link: '/documentation/folders' },
+            { text: 'Tags', link: '/documentation/tags' },
+            { text: 'Snippets', link: '/documentation/snippets' },
+            { text: 'Fragments', link: '/documentation/fragments' },
+            { text: 'Description', link: '/documentation/description' },
+            { text: 'Search', link: '/documentation/search' },
+            { text: 'Storage', link: '/documentation/storage' },
+            { text: 'Sync', link: '/documentation/sync' }
+          ]
+        },
+        {
+          text: 'Markdown',
+          items: [
+            { text: 'Markdown', link: '/documentation/markdown.md' }
+          ]
+        }
+      ]
     }
   }
+
 })

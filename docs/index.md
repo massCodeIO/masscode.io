@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: Get massCode
-      link: '/download'
+      link: '/download/'
     - theme: alt
       text: Documentation
-      link: '/documentation'
+      link: '/documentation/'
     - theme: alt
       text: Snippet Collection
       link: '/snippets'
