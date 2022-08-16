@@ -1,17 +1,22 @@
 :root {
   --vp-c-brand: hsl(225, 73%, 57%);
-  --vp-button-brand-border: hsl(225, 56%, 40%);
+  --vp-button-brand-border: hsl(225, 56%, 50%);
   --vp-button-brand-hover-border: hsl(225, 44%, 53%);
   --vp-button-brand-hover-bg: hsl(225, 73%, 67%);
   --vp-button-brand-bg: var(--vp-c-brand);
+
+  --font-code: 'SF Mono', Consolas, Menlo, Ubuntu Mono, monospace;
 }
 
 code {
-  font-family: 'SF Mono', Consolas, Menlo, Ubuntu Mono, monospace;
+  font-family: var(--font-code);
   font-size: 13px;
-  background-color: var(--vp-c-gray-light-4);
   padding: 0 4px;
   border-radius: 3px;
+}
+
+svg {
+  display: inline-block;
 }
 
 .wrapper {
@@ -28,9 +33,22 @@ code {
   }
 }
 
-.dark {
+
+.is-home {
   code {
-    background-color: var(--vp-c-gray-dark-5);
+    background-color: var(--vp-c-gray-light-4);
+  }
+}
+
+
+.dark {
+  .is-home {
+    code {
+      background-color: var(--vp-c-gray-dark-5);
+    }
+  }
+  svg {
+    fill: var(--vp-c-text-1);
   }
 }
 
