@@ -1,13 +1,14 @@
 <template>
   <span class="app-link">
-    <a
+    <component
+      :is="component"
       class="app-link"
       :href="href"
-      :target="external ? '_blank' : null"
-      :rel="external ? 'noopener noreferrer' : null"
+      :target="isExternal ? '_blank' : null"
+      :rel="isExternal ? 'noopener noreferrer' : null"
     >
       <slot />
-      <template v-if="external">
+      <template v-if="isExternal">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
@@ -23,17 +24,27 @@
           <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z" />
         </svg>
       </template>
-    </a>
+    </component>
   </span>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+
 interface Props {
   href: string
-  external?: boolean
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
+
+const isExternal = computed(() => props.href && /^[a-z]+:/.test(props.href))
+
+const component = computed(() => {
+  if (props.tag)
+    return props.tag
+
+  return props.href ? 'a' : 'button'
+})
 </script>
 
 <style lang="scss" scoped>

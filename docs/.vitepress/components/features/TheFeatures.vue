@@ -8,27 +8,18 @@
       </FeaturesItem>
       <FeaturesItem title="Editor">
         massCode uses
-        <AppLink
-          href="https://github.com/codemirror/codemirror5"
-          :external="true"
-        >
+        <AppLink href="https://github.com/codemirror/codemirror5">
           Codemirror
         </AppLink>
         as the basis for the editor and .tmLanguage as the grammar for syntax
         highlighting. This tandem opens the door to over
-        <AppLink
-          href="https://github.com/github/linguist/blob/master/vendor/README.md"
-          :external="true"
-        >
+        <AppLink href="https://github.com/github/linguist/blob/master/vendor/README.md">
           600
         </AppLink>
         existing grammars. The application currently supports more than 160
         grammars. In addition to <code>.tmLanguage</code>, the application
         supports <code>.tmTheme</code> for themes. There is also support for
-        <AppLink
-          href="https://prettier.io/"
-          :external="true"
-        >
+        <AppLink href="https://prettier.io/">
           Prettier
         </AppLink>
         for code formatting.
@@ -73,23 +64,14 @@
       </FeaturesItem>
       <FeaturesItem title="Integrations">
         massCode supports extensions for
-        <AppLink
-          href="https://marketplace.visualstudio.com/items?itemName=AntonReshetov.masscode-assistant"
-          :external="true"
-        >
+        <AppLink href="https://marketplace.visualstudio.com/items?itemName=AntonReshetov.masscode-assistant">
           VS Code
         </AppLink>,
-        <AppLink
-          href="https://www.raycast.com/antonreshetov/masscode"
-          :external="true"
-        >
+        <AppLink href="https://www.raycast.com/antonreshetov/masscode">
           Raycast
         </AppLink>
         and
-        <AppLink
-          href="https://github.com/massCodeIO/assistant-alfred"
-          :external="true"
-        >
+        <AppLink href="https://github.com/massCodeIO/assistant-alfred">
           Alfred
         </AppLink>, which gives even more possibilities to use application. With the VS
         Code extension you get practically zen mode, search for the necessary
