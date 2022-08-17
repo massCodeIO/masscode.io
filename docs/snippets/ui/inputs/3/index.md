@@ -1,5 +1,6 @@
 ---
 title: Input - 3
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 ---
 

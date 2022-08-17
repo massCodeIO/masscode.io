@@ -1,5 +1,6 @@
 ---
 title: Loader - 15
+titleTemplate: Snippet Collection | massCode
 author: G4b413l
 ---
 

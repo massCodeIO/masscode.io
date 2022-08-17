@@ -1,5 +1,6 @@
 ---
 title: WiFi Loader
+titleTemplate: Snippet Collection | massCode
 author: mobinkakei
 ---
 

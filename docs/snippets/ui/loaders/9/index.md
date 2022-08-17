@@ -1,5 +1,6 @@
 ---
 title: Packman
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 isDark: true
 ---

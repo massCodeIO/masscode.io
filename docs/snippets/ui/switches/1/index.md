@@ -1,5 +1,6 @@
 ---
 title: Toggle switch - 1
+titleTemplate: Snippet Collection | massCode
 author: G4b413l
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Google search
+titleTemplate: Snippet Collection | massCode
 author: TimTrayler
 ---
 

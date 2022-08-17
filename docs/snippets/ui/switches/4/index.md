@@ -1,5 +1,6 @@
 ---
 title: Drawn Switcher
+titleTemplate: Snippet Collection | massCode
 author: Voxybuns
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Flush Button
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 ---
 

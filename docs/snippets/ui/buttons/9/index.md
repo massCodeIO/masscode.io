@@ -1,5 +1,6 @@
 ---
 title: macOS Button
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 isGray: true
 ---

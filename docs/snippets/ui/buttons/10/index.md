@@ -1,5 +1,6 @@
 ---
 title: Button - 10
+titleTemplate: Snippet Collection | massCode
 author: kathykato
 ---
 

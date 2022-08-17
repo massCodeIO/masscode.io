@@ -1,5 +1,6 @@
 ---
 title: Love Switcher
+titleTemplate: Snippet Collection | massCode
 author: barisdogansutcu
 ---
 

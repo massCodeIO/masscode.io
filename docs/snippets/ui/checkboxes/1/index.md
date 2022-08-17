@@ -1,5 +1,6 @@
 ---
 title: Checkbox - 1
+titleTemplate: Snippet Collection | massCode
 author: adamgiebl
 ---
 

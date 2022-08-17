@@ -1,5 +1,6 @@
 ---
 title: Cube Loader - 2
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Wordle
+titleTemplate: Snippet Collection | massCode
 author: mrhyddenn
 ---
 

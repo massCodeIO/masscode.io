@@ -1,5 +1,6 @@
 ---
 title: Batman
+titleTemplate: Snippet Collection | massCode
 author: barisdogansutcu
 ---
 

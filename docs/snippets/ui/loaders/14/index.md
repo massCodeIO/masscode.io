@@ -1,5 +1,6 @@
 ---
 title: Loader - 14
+titleTemplate: Snippet Collection | massCode
 author: PhilibertGentien
 ---
 

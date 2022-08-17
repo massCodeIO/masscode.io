@@ -1,5 +1,6 @@
 ---
 title: Cart Loader
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 ---
 

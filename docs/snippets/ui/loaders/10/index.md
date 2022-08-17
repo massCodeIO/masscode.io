@@ -1,5 +1,6 @@
 ---
 title: Cloud & Rain
+titleTemplate: Snippet Collection | massCode
 author: mrhyddenn
 isDark: true
 ---

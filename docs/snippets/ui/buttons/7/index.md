@@ -1,5 +1,6 @@
 ---
 title: Drawn Button
+titleTemplate: Snippet Collection | massCode
 author: Voxybuns
 ---
 

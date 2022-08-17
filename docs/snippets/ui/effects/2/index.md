@@ -1,5 +1,6 @@
 ---
 title: Waves
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 ---
 

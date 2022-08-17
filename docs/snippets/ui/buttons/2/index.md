@@ -1,5 +1,6 @@
 ---
 title: Gooey Effect
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 ---
 

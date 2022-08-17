@@ -1,5 +1,6 @@
 ---
 title: Loader - 5
+titleTemplate: Snippet Collection | massCode
 author: satyamchaudharydev
 isDark: true
 ---

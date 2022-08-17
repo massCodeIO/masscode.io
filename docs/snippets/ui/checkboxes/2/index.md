@@ -1,5 +1,6 @@
 ---
 title: Twitter like
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 isDark: true
 ---

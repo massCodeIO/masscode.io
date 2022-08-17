@@ -1,5 +1,6 @@
 ---
 title: Cube loader
+titleTemplate: Snippet Collection | massCode
 author: AqFox
 ---
 

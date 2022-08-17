@@ -1,5 +1,6 @@
 ---
 title: Button - 11
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 ---
 

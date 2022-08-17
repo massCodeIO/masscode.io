@@ -1,5 +1,6 @@
 ---
 title: Glitch Effect
+titleTemplate: Snippet Collection | massCode
 author: namecho
 ---
 

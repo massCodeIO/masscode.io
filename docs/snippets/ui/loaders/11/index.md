@@ -1,5 +1,6 @@
 ---
 title: Clock loader
+titleTemplate: Snippet Collection | massCode
 author: mrhyddenn
 isDark: true
 ---

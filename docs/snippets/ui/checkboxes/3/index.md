@@ -1,5 +1,6 @@
 ---
 title: Checkbox - 3
+titleTemplate: Snippet Collection | massCode
 author: mrhyddenn
 ---
 

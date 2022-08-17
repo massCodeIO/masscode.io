@@ -1,5 +1,6 @@
 ---
 title: Dark / Light Switcher
+titleTemplate: Snippet Collection | massCode
 author: mobinkakei
 ---
 

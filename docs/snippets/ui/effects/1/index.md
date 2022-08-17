@@ -1,5 +1,6 @@
 ---
 title: Particles
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 ---
 

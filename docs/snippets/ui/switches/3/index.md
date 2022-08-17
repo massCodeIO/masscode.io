@@ -1,5 +1,6 @@
 ---
 title: Lock Switcher
+titleTemplate: Snippet Collection | massCode
 author: mobinkakei
 ---
 

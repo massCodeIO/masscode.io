@@ -1,5 +1,6 @@
 ---
 title: Loader - 8
+titleTemplate: Snippet Collection | massCode
 author: antonreshetov
 isDark: true
 ---

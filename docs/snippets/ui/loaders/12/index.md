@@ -1,5 +1,6 @@
 ---
 title: Loader - 12
+titleTemplate: Snippet Collection | massCode
 author: fanishah
 isDark: true
 ---

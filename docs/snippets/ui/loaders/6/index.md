@@ -1,5 +1,6 @@
 ---
 title: Newtons cradle
+titleTemplate: Snippet Collection | massCode
 author: G4b413l
 ---
 

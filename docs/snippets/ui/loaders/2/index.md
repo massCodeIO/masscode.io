@@ -1,5 +1,6 @@
 ---
 title: Loader - 2
+titleTemplate: Snippet Collection | massCode
 author: barisdogansutcu
 ---
 
