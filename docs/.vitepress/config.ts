@@ -82,7 +82,11 @@ export default defineConfig({
           ]
         }
       ]
+    },
+
+    carbonAds: {
+      code: 'CE7DEKQM',
+      placement: 'masscodeio'
     }
   }
-
 })
