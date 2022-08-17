@@ -30,7 +30,7 @@ export default defineConfig({
       { text: 'Documentation', link: '/documentation/' },
       { text: 'Releases', link: 'https://github.com/massCodeIO/massCode/releases/' },
       { text: 'Snippet Collection', link: '/snippets/ui/buttons/' },
-      { text: 'Donate', link: '/donate' }
+      { text: 'Donate', link: '/donate/' }
     ],
 
     socialLinks: [
