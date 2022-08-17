@@ -1,0 +1,3 @@
+# Loaders
+
+<CollectionPreview category="loaders" />

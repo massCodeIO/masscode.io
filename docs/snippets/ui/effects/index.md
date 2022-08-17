@@ -1,0 +1,3 @@
+# Effects
+
+<CollectionPreview category="effects" />

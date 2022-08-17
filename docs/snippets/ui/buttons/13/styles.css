@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  text-transform: uppercase;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 0.5em;
+  background: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px #fff;
+}
+
+button:hover {
+  border: 1px solid white;
+}
+
+button:active {
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1), 0 -0 12px #fff;
+}
