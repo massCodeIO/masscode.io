@@ -1,0 +1,3 @@
+# Switches
+
+<CollectionPreview category="switches" />

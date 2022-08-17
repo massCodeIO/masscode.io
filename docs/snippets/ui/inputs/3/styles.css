@@ -1,0 +1,77 @@
+.input {
+  position: relative;
+  margin: 12px 5px;
+  --accent-color: royalblue;
+}
+
+.input:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.input:before,
+.input:after {
+  content: '';
+  left: 0;
+  right: 0;
+  position: absolute;
+  pointer-events: none;
+  bottom: -1px;
+  z-index: 4;
+  width: 100%;
+}
+
+.input:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.input:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.input:focus-within:after {
+  border-bottom: 2px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.input:after {
+  content: '';
+  transform: scaleX(0);
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  will-change: transform;
+  border-bottom: 2px solid var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.text-input::placeholder {
+  transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  opacity: 1;
+  user-select: none;
+}
+
+.input .text-input {
+  max-height: 36px;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 200ms;
+  transition-property: background-color;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+}
+
+.input .text-input:focus,
+.input .text-input:active {
+  outline: none;
+}
+
+.input:focus-within .text-input,
+.input .text-input:focus,
+.input .text-input:active {
+}
+
+.input:focus-within .text-input::placeholder {
+  opacity: 0;
+}

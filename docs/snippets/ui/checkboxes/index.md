@@ -1,0 +1,3 @@
+# Checkboxes
+
+<CollectionPreview category="checkboxes" />

@@ -1,0 +1,3 @@
+# Inputs
+
+<CollectionPreview category="inputs" />

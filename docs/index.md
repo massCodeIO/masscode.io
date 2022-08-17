@@ -1,6 +1,6 @@
 ---
 layout: home
-titleTemplate: 'A free and open source code snippets manager for developers'
+titleTemplate: "A free and open source code snippets manager for developers"
 hero:
   image:
     src: /logo.png
@@ -12,13 +12,13 @@ hero:
   actions:
     - theme: brand
       text: Get massCode
-      link: '/download/'
+      link: "/download/"
     - theme: alt
       text: Documentation
-      link: '/documentation/'
+      link: "/documentation/"
     - theme: alt
       text: Snippet Collection
-      link: '/snippets'
+      link: "/snippets/ui/buttons/"
 ---
 
 <TheFeatures/>
@@ -26,5 +26,3 @@ hero:
 <script setup lang="ts">
 import TheFeatures from './.vitepress/components/features/TheFeatures.vue'
 </script>
-
-
