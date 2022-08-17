@@ -8,11 +8,14 @@
   --font-code: 'SF Mono', Consolas, Menlo, Ubuntu Mono, monospace;
 }
 
-code {
+code, kbd {
   font-family: var(--font-code);
-  font-size: 13px;
   padding: 0 4px;
   border-radius: 3px;
+}
+
+kbd {
+  background-color: var(--vp-c-gray-light-4);
 }
 
 svg {
@@ -47,8 +50,13 @@ svg {
       background-color: var(--vp-c-gray-dark-5);
     }
   }
+
   svg {
     fill: var(--vp-c-text-1);
+  }
+
+  kbd {
+    background-color: var(--vp-c-gray-dark-3);
   }
 }
 
