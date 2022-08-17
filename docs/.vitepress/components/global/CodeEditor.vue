@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import 'codemirror/lib/codemirror.css'
-import 'codemirror/theme/material.css'
+import 'codemirror/theme/material-palenight.css'
 import { onMounted, ref } from 'vue'
 
 interface Props {
@@ -37,7 +37,7 @@ const init = async () => {
   editor = CodeMirror(editorRef.value, {
     value: props.modelValue,
     mode: props.lang,
-    theme: 'material',
+    theme: 'material-palenight',
     lineNumbers: true,
     scrollbarStyle: 'null'
   })
@@ -53,4 +53,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+.editor {
+  overflow: hidden;
+  border-radius: 8px;
+}
 </style>
