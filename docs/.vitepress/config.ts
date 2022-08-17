@@ -29,7 +29,7 @@ export default defineConfig({
     nav: [
       { text: 'Documentation', link: '/documentation/' },
       { text: 'Releases', link: 'https://github.com/massCodeIO/massCode/releases/' },
-      { text: 'Snippet Collection', link: '/snippets' },
+      { text: 'Snippet Collection', link: '/snippets/ui/buttons/' },
       { text: 'Donate', link: '/donate' }
     ],
 
@@ -64,6 +64,21 @@ export default defineConfig({
           text: 'Markdown',
           items: [
             { text: 'Markdown', link: '/documentation/markdown.md' }
+          ]
+        }
+      ],
+      '/snippets/': [
+        {
+          text: 'UI',
+          collapsed: false,
+          collapsible: true,
+          items: [
+            { text: 'Buttons', link: '/snippets/ui/buttons/' },
+            { text: 'Checkboxes', link: '/snippets/ui/checkboxes/' },
+            { text: 'Effects', link: '/snippets/ui/effects/' },
+            { text: 'Inputs', link: '/snippets/ui/inputs/' },
+            { text: 'Loaders', link: '/snippets/ui/loaders/' },
+            { text: 'Switches', link: '/snippets/ui/switches/' }
           ]
         }
       ]
