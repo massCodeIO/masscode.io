@@ -1,3 +1,7 @@
+---
+title: Download
+---
+
 # Select your platform
 
 ## macOS
@@ -25,4 +29,3 @@ Ubuntu
 <script setup lang="ts">
 import VPButton from 'vitepress/client/theme-default/components/VPButton.vue'
 </script>
-
