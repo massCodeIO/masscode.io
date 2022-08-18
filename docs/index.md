@@ -18,7 +18,7 @@ hero:
       link: "/documentation/"
     - theme: alt
       text: Snippet Collection
-      link: "/snippets/ui/buttons/"
+      link: "/snippets/"
 ---
 
 <TheHome/>

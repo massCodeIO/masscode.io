@@ -29,7 +29,7 @@ export default defineConfig({
     nav: [
       { text: 'Documentation', link: '/documentation/' },
       { text: 'Releases', link: 'https://github.com/massCodeIO/massCode/releases/' },
-      { text: 'Snippet Collection', link: '/snippets/ui/buttons/' },
+      { text: 'Snippet Collection', link: '/snippets/' },
       { text: 'Donate', link: '/donate/' }
     ],
 
