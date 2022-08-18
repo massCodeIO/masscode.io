@@ -34,7 +34,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'twitter', link: 'https://twitter.com/antonreshetov' },
+      { icon: 'twitter', link: 'https://twitter.com/anton_reshetov' },
       { icon: 'github', link: 'https://github.com/massCodeIO/massCode' }
     ],
 
