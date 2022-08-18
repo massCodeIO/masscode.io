@@ -21,8 +21,8 @@ hero:
       link: "/snippets/ui/buttons/"
 ---
 
-<TheFeatures/>
+<TheHome/>
 
 <script setup lang="ts">
-import TheFeatures from './.vitepress/components/features/TheFeatures.vue'
+import TheHome from './.vitepress/components/TheHome.vue'
 </script>
