@@ -18,7 +18,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { useDark } from '../../composables'
 
 interface Props {
   html: string
@@ -29,9 +30,9 @@ interface Props {
 
 const props = defineProps<Props>()
 
+const { isDark } = useDark()
+
 const srcDoc = ref()
-const isDark = ref(false)
-let observer = null
 
 const htmlDefault
   = '<div>Add fragments with HTML & CSS languages to view result.</div>'
@@ -54,25 +55,6 @@ const cssDefault = computed(() => {
 })
 
 const importCss = props.css.match(/^@import.*/gm)
-
-const checkIsDark = () => {
-  isDark.value = document.documentElement.classList.contains('dark')
-}
-
-onMounted(() => {
-  checkIsDark()
-
-  observer = new MutationObserver(() => {
-    checkIsDark()
-  })
-
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ['class']
-  })
-})
-
-onBeforeUnmount(() => observer.disconnect())
 
 watch(
   () => [props.html, props.css, isDark.value],
