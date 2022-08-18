@@ -62,3 +62,61 @@ const decapitalize = ([first, ...rest]) => first.toLowerCase() + rest.join('')
 ```js
 decapitalize('FooBar') // 'fooBar'
 ```
+
+## Is String
+
+This snippet can be used to check whether an argument is a string.
+
+```js
+const isString = val => typeof val === 'string'
+```
+
+#### Example
+
+```js
+isString('5') // true
+```
+
+## Is Lower Case
+
+This snippet can be used to determine whether a string is lower case.
+
+```js
+const isLowerCase = str => str === str.toLowerCase()
+```
+
+#### Example
+
+```js
+isLowerCase('some') // true
+isLowerCase('RanDom') // false
+```
+
+## Is Upper Case
+
+This snippet can be used to check whether a string is upper case.
+
+```js
+const isUpperCase = str => str === str.toUpperCase()
+```
+
+#### Example
+
+```js
+isUpperCase('SOME') // true
+isLowerCase('RanDom') // true
+```
+
+## Reverse
+
+This snippet can be used to reverse a string.
+
+```js
+const reverseString = str => [...str].reverse().join('')
+```
+
+#### Example
+
+```js
+reverseString('some') // 'meos'
+```
