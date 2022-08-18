@@ -65,3 +65,14 @@ svg {
     max-width: 256px;
   }
 }
+
+// Fix markdown code block styles
+.vp-doc [class*="language-"] {
+  code {
+    padding: 0 24px;
+    display: block;
+    .line {
+      padding: 0;
+    }
+  }
+}
