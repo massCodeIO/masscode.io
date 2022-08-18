@@ -49,7 +49,7 @@ const capitalizeEveryWord = str =>
 capitalizeEveryWord('foo bar') // 'Foo Bar'
 ```
 
-### Decapitalize
+## Decapitalize
 
 This snippet turns the first letter of a string into lowercase.
 
