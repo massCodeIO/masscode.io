@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "codemirror": "5",
+    "codemirror": "^5.65.7",
     "vue-gtag": "^2.0.1"
   },
   "devDependencies": {
