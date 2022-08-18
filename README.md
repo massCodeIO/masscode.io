@@ -1,4 +1,4 @@
-# The official site for massCode
+# masscode.io
 
 The repository contains a landing page, documentation, and a collection of snippets.
 
