@@ -98,7 +98,9 @@ onMounted(async () => {
   .sponsors-item {
     img {
       filter: grayscale(1) invert(1);
-      &:hover {
+    }
+    &:hover {
+      img {
         filter:  none;
       }
     }
