@@ -29,6 +29,7 @@ const fetch = async () => {
   const downloadUrl = `https://github.com/massCodeIO/massCode/releases/download/${tagName}`
 
   const assets = {
+    version,
     mac: `${downloadUrl}/${macAsset}`,
     macM1: `${downloadUrl}/${macM1Asset}`,
     win: `${downloadUrl}/${winAsset}`,

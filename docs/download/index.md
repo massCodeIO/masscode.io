@@ -4,6 +4,8 @@ title: Download
 
 # Select your platform
 
+Current version v{{assets.version}}
+
 ## macOS
 
 <VPButton :href="assets.macM1" theme="brand" text="Download for Apple Silicon" />
