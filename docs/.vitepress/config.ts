@@ -69,7 +69,7 @@ export default defineConfig({
       '/snippets/': [
         {
           text: 'UI',
-          collapsed: true,
+          collapsed: false,
           collapsible: true,
           items: [
             { text: 'Buttons', link: '/snippets/ui/buttons/' },
@@ -82,7 +82,7 @@ export default defineConfig({
         },
         {
           text: 'JavaScript',
-          collapsed: true,
+          collapsed: false,
           collapsible: true,
           items: [
             { text: 'Array', link: '/snippets/javascript/array/' },
