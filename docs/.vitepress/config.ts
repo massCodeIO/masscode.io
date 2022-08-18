@@ -70,7 +70,7 @@ export default defineConfig({
       '/snippets/': [
         {
           text: 'UI',
-          collapsed: false,
+          collapsed: true,
           collapsible: true,
           items: [
             { text: 'Buttons', link: '/snippets/ui/buttons/' },
@@ -80,8 +80,23 @@ export default defineConfig({
             { text: 'Loaders', link: '/snippets/ui/loaders/' },
             { text: 'Switches', link: '/snippets/ui/switches/' }
           ]
+        },
+        {
+          text: 'JavaScript',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            { text: 'Array', link: '/snippets/javascript/array/' },
+            { text: 'DOM', link: '/snippets/javascript/dom/' },
+            { text: 'String', link: '/snippets/javascript/string/' }
+          ]
         }
       ]
+    },
+
+    editLink: {
+      pattern: 'https://github.com/massCodeIO/masscode.io/edit/master/docs/:path',
+      text: 'Edit this page on GitHub'
     },
 
     carbonAds: {
