@@ -10,10 +10,13 @@
 <script setup lang="ts">
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material-palenight.css'
-import { onMounted, ref } from 'vue'
+import 'codemirror/theme/material-darker.css'
+import { computed, onMounted, ref, watch } from 'vue'
+import type CodeMirror from '@types/codemirror'
+import { useDark } from '../../composables'
 
 interface Props {
-  lang: Language
+  lang: string
   modelValue: string
 }
 
@@ -22,12 +25,16 @@ interface Emits {
 }
 
 const props = defineProps<Props>()
-
 const emit = defineEmits<Emits>()
+const { isDark } = useDark()
 
 const editorRef = ref()
 
 let editor: CodeMirror.Editor
+
+const theme = computed(() => {
+  return isDark.value ? 'material-darker' : 'material-palenight'
+})
 
 const init = async () => {
   const { default: CodeMirror } = await import('codemirror')
@@ -37,13 +44,17 @@ const init = async () => {
   editor = CodeMirror(editorRef.value, {
     value: props.modelValue,
     mode: props.lang,
-    theme: 'material-palenight',
+    theme: theme.value,
     lineNumbers: true,
     scrollbarStyle: 'null'
   })
 
   editor.on('change', () => {
     emit('update:modelValue', editor.getValue())
+  })
+
+  watch(isDark, () => {
+    editor.setOption('theme', theme.value)
   })
 }
 
