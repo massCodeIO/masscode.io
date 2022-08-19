@@ -1,1 +1,1 @@
-docs/.vitepress/* -linguist-documentation
+docs/.vitepress/** -linguist-documentation
