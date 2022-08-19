@@ -103,7 +103,7 @@ last([1, 2, 3, 4]) // 4
 
 ## Random
 
-desc
+This snippet can be used to get a random number from an array.
 
 ```js
 const random = arr => arr[Math.floor(Math.random() * arr.length)]
@@ -113,6 +113,20 @@ const random = arr => arr[Math.floor(Math.random() * arr.length)]
 
 ```js
 random([3, 1, 4, 11]) // 4
+```
+
+## With Length
+
+This snippet get an array with specified length.
+
+```js
+const witLength = n => new Array(n).fill('')
+```
+
+#### Example
+
+```js
+witLength(5) // ['', '', '', '', '']
 ```
 
 ## Uniq

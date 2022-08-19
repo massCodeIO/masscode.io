@@ -88,6 +88,7 @@ export default defineConfig({
             { text: 'Array', link: '/snippets/javascript/array/' },
             { text: 'DOM', link: '/snippets/javascript/dom/' },
             { text: 'Number', link: '/snippets/javascript/number/' },
+            { text: 'Object', link: '/snippets/javascript/object/' },
             { text: 'String', link: '/snippets/javascript/string/' }
           ]
         }
