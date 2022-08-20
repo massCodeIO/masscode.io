@@ -120,13 +120,13 @@ random([3, 1, 4, 11]) // 4
 This snippet get an array with specified length.
 
 ```js
-const witLength = n => new Array(n).fill('')
+const withLength = n => new Array(n).fill('')
 ```
 
 #### Example
 
 ```js
-witLength(5) // ['', '', '', '', '']
+withLength(5) // ['', '', '', '', '']
 ```
 
 ## Uniq
