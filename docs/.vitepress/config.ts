@@ -103,6 +103,12 @@ export default defineConfig({
     carbonAds: {
       code: 'CE7DEKQM',
       placement: 'masscodeio'
+    },
+
+    algolia: {
+      appId: '92Q94XIWQY',
+      apiKey: '2d71b8791faff1435f75479ffbea2f2e',
+      indexName: 'masscode'
     }
   }
 })
