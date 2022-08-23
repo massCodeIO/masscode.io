@@ -2,13 +2,11 @@
   <div
     ref="sponsorsRef"
     class="sponsors"
+    :class="{ sidebar: placement === 'sidebar' }"
   >
-    <template v-if="isShow">
+    <template v-if="placement === 'sidebar' || isShow">
       <h2>{{ title }} sponsors</h2>
-      <div
-
-        class="body"
-      >
+      <div class="body">
         <a
           v-for="{ img, url, name } of data[tier]"
           :key="name"
@@ -43,11 +41,14 @@ interface SponsorData {
 }
 
 interface Props {
-  title: string
+  title?: string
   tier: keyof SponsorData
+  placement?: 'home' | 'sidebar'
 }
 
-defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  placement: 'home'
+})
 
 const data = ref<SponsorData>(sponsorsData)
 const isShow = ref(false)
@@ -55,6 +56,9 @@ const isShow = ref(false)
 const sponsorsRef = ref<HTMLElement>()
 
 const showSponsors = () => {
+  if (props.placement === 'sidebar')
+    return
+
   const observer = new IntersectionObserver(
     (entries) => {
       if (entries[0].isIntersecting) {
@@ -87,6 +91,22 @@ onMounted(async () => {
     font-size: 20px;
     font-weight: 600;
   }
+
+  &.sidebar {
+    margin-top: 0;
+    h2 {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--vp-c-text-3);
+    }
+    .body {
+      margin-top: 8px;
+      grid-template-columns: 1fr;
+    }
+    .sponsors-item {
+      padding: 12px 24px;
+    }
+  }
 }
 .sponsors-item {
   background-color: var(--vp-c-bg-soft);
@@ -97,6 +117,7 @@ onMounted(async () => {
 .dark {
   .sponsors-item {
     img {
+      transition: all .2s;
       filter: grayscale(1) invert(1);
     }
     &:hover {

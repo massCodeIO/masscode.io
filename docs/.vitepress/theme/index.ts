@@ -1,16 +1,23 @@
 import DefaultTheme from 'vitepress/theme'
 import type { EnhanceAppContext } from 'vitepress'
 import VueGtag, { pageview } from 'vue-gtag'
-import { watch } from 'vue'
+import { h, watch } from 'vue'
 import AppLink from '../components/global/AppLink.vue'
 import AppVersion from '../components/global/AppVersion.vue'
 import CodeEditor from '../components/global/CodeEditor.vue'
 import CodePreview from '../components/global/CodePreview.vue'
 import CollectionPreview from '../components/global/CollectionPreview.vue'
+import SidebarSponsors from '../components/sponsors/SidebarSponsors.vue'
+
 import './styles.scss'
 
 export default {
   ...DefaultTheme,
+  Layout () {
+    return h(DefaultTheme.Layout, null, {
+      'aside-outline-after': () => h(SidebarSponsors)
+    })
+  },
   enhanceApp (context: EnhanceAppContext) {
     context.app.component('AppLink', AppLink)
     context.app.component('AppVersion', AppVersion)
