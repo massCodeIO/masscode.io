@@ -8,7 +8,7 @@ hero:
   name: massCode
   text: Boost your productivity
   tagline: |
-    A free and open source code snippets manager for developers. It helps you create and organize your own personal snippets collection and have quick access to it.
+    A free and open source code snippets manager for developers. It helps you create and organize your own personal snippet collection and have quick access to it.
   actions:
     - theme: brand
       text: Get massCode
