@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { version } from './_data/assets.json'
 
 const description = 'Code snippets manager for developers, developed using web technologies.'
 const ogDescription = 'A free and open source code snippets manager for developers'
@@ -26,10 +27,16 @@ export default defineConfig({
     logo: '/logo-64w.png',
 
     nav: [
-      { text: 'Download', link: '/download/' },
       { text: 'Documentation', link: '/documentation/' },
       { text: 'Snippet Collection', link: '/snippets/' },
-      { text: 'Donate', link: '/donate/' }
+      { text: 'Donate', link: '/donate/' },
+      {
+        text: version,
+        items: [
+          { text: 'Download', link: '/download/' },
+          { text: 'Change Log', link: 'https://github.com/massCodeIO/massCode/releases' }
+        ]
+      }
     ],
 
     socialLinks: [

@@ -6,7 +6,7 @@ title: Download
 
 Current version v{{assets.version}}
 
-<AppLink href="https://github.com/massCodeIO/massCode/releases">All versions</AppLink>
+<AppLink href="https://github.com/massCodeIO/massCode/releases">Change Log</AppLink>
 
 ## macOS
 
