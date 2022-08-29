@@ -12,6 +12,14 @@ However, the amount of effort needed to maintain and develop new features for th
   text="Go to Open Collective"
 />
 
+## One-time donation via Gumroad (Visa, Mastercard, etc.)
+
+<VPButton
+  href="https://antonreshetov.gumroad.com/l/masscode"
+  theme="brand"
+  text="Go to Gumroad"
+/>
+
 ## One-time donation via PayPal
 
 <VPButton
@@ -20,7 +28,7 @@ However, the amount of effort needed to maintain and develop new features for th
   text="Go to PayPal"
 />
 
-## On-time donation via Bitcoin:
+## On-time donation via Bitcoin
 
 `bc1qxrgea7epgt2qu72ylp6lg2n7dm59zcqvxcvaja`
 
