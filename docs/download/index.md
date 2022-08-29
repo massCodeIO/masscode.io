@@ -4,7 +4,7 @@ title: Download
 
 # Select your platform
 
-Current version v{{assets.version}}
+Current version {{assets.version}}
 
 <AppLink href="https://github.com/massCodeIO/massCode/releases">Change Log</AppLink>
 
