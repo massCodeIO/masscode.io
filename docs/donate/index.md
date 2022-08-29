@@ -31,7 +31,3 @@ However, the amount of effort needed to maintain and develop new features for th
 ## On-time donation via Bitcoin
 
 `bc1qxrgea7epgt2qu72ylp6lg2n7dm59zcqvxcvaja`
-
-<script setup lang="ts">
-import VPButton from 'vitepress/client/theme-default/components/VPButton.vue'
-</script>
