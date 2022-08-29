@@ -6,6 +6,8 @@ title: Download
 
 Current version v{{assets.version}}
 
+<AppLink href="https://github.com/massCodeIO/massCode/releases">All versions</AppLink>
+
 ## macOS
 
 <VPButton @click="onShowDialog" :href="assets.macM1" theme="brand" text="Download for Apple Silicon" />

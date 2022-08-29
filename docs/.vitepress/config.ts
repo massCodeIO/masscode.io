@@ -26,8 +26,8 @@ export default defineConfig({
     logo: '/logo-64w.png',
 
     nav: [
+      { text: 'Download', link: '/download/' },
       { text: 'Documentation', link: '/documentation/' },
-      { text: 'Releases', link: 'https://github.com/massCodeIO/massCode/releases/' },
       { text: 'Snippet Collection', link: '/snippets/' },
       { text: 'Donate', link: '/donate/' }
     ],
