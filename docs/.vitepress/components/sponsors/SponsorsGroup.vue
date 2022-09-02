@@ -8,7 +8,7 @@
       <h2>{{ title }} sponsors</h2>
       <div class="body">
         <a
-          v-for="{ img, url, name } of data[tier]"
+          v-for="{ img, url, name, text } of data[tier]"
           :key="name"
           :href="url"
           target="_blank"
@@ -19,6 +19,12 @@
             :src="img"
             :alt="name"
           >
+          <div
+            v-if="placement === 'sidebar' && text"
+            class="text"
+          >
+            {{ text }}
+          </div>
         </a>
       </div>
     </template>
@@ -33,7 +39,7 @@ interface Sponsor {
   url: string
   img: string
   name: string
-  description?: string
+  text?: string
 }
 
 interface SponsorData {
@@ -85,7 +91,10 @@ onMounted(async () => {
     margin-top: 24px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;;
+    gap: 24px;
+    img {
+      max-height: 40px;
+    }
   }
   h2 {
     font-size: 20px;
@@ -102,9 +111,16 @@ onMounted(async () => {
     .body {
       margin-top: 8px;
       grid-template-columns: 1fr;
+      gap: 8px;
     }
     .sponsors-item {
       padding: 12px 24px;
+    }
+    .text {
+      font-size: 12px;
+      color: var(--vp-c-text-2);
+      line-height: 12px;
+      margin-top: 8px;
     }
   }
 }
@@ -112,6 +128,10 @@ onMounted(async () => {
   background-color: var(--vp-c-bg-soft);
   padding: 24px;
   border-radius: 4px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .dark {
