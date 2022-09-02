@@ -1,5 +1,6 @@
 ---
-title: JavaScript Number | Snippet Collection
+title: JavaScript Number
+titleTemplate: Snippet Collection | massCode
 description: Collection of JavaScript Number snippets
 ---
 

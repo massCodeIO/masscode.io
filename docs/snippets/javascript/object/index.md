@@ -1,5 +1,6 @@
 ---
-title: JavaScript Object | Snippet Collection
+title: JavaScript Object
+titleTemplate: Snippet Collection | massCode
 description: Collection of JavaScript Object snippets
 ---
 

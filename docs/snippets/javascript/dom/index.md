@@ -1,5 +1,6 @@
 ---
-title: JavaScript DOM | Snippet Collection
+title: JavaScript DOM
+titleTemplate: Snippet Collection | massCode
 description: Collection of JavaScript DOM snippets
 ---
 
