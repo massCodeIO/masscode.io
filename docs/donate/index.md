@@ -1,5 +1,9 @@
 # Support massCode development
 
+::: info
+Everyone who donated will get a special version without the "Unsponsored" label in the upper right corner, as well as a pop-up notification of the donation.
+:::
+
 massCode is open source project and completely free to use.
 
 However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. You can support massCode development via the following methods:
