@@ -82,8 +82,8 @@
       different modes.
     </FeaturesItem>
     <FeaturesItem title="Localization">
-      massCode is available in Deutsch, English, Español, Português (Brasil), Русский,
-      中文 (简体), 中文 (繁體), 中文 (繁體 香港特別行政區) & 日本語 languages.
+      massCode is available in Deutsch, Ελληνικά, English, Español, 日本語, Português (Brasil), Русский, Українська,
+      中文 (简体), 中文 (繁體) & 中文 (繁體 香港特別行政區) languages.
     </FeaturesItem>
   </div>
 </template>
