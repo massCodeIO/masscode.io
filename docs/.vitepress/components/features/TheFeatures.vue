@@ -10,7 +10,7 @@
       <AppLink href="https://github.com/codemirror/codemirror5">
         Codemirror
       </AppLink>
-      as the basis for the editor and .tmLanguage as the grammar for syntax
+      as the basis for the editor and <code>.tmLanguage</code> as the grammar for syntax
       highlighting. This tandem opens the door to over
       <AppLink href="https://github.com/github/linguist/blob/master/vendor/README.md">
         600
