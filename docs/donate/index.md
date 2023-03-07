@@ -32,6 +32,13 @@ However, the amount of effort needed to maintain and develop new features for th
   text="Go to PayPal"
 />
 
-## On-time donation via Bitcoin
+## On-time donation via Binance
 
-`bc1qxrgea7epgt2qu72ylp6lg2n7dm59zcqvxcvaja`
+<div class="crypto-qr">
+  <img :src="withBase('/usdt.png')">
+  <p>USDT</p>
+</div>
+
+<script setup>
+import { withBase } from 'vitepress'
+</script>
