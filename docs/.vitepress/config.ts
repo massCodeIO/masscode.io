@@ -20,7 +20,8 @@ export default defineConfig({
     ['meta', { property: 'og:url', content: ogUrl }],
     ['meta', { property: 'og:description', content: ogDescription }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'google-site-verification', content: gsv }]
+    ['meta', { name: 'google-site-verification', content: gsv }],
+    ['script', { 'defer': '', 'data-domain': 'masscode.io', 'src': 'https://m.masscode.io/js/script.js' }]
   ],
 
   themeConfig: {
