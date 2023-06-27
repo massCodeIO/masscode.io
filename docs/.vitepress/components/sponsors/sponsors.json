@@ -11,6 +11,12 @@
       "url": "https://mysigmail.com?ref=masscode.io",
       "img": "https://mysigmail.com/img/logo.svg",
       "text": "Email Signature Generator"
+    },
+    {
+      "name": "Vue Email Components",
+      "url": "https://github.com/mysigmail/vue-email?ref=masscode.io",
+      "img": "https://mysigmail.com/img/vue-email.png",
+      "text": "A Vue unstyled components"
     }
   ]
 }
