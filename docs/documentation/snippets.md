@@ -37,6 +37,18 @@ Follow one of the following steps:
 - Select **"Editor"** > **"Copy Snippet to Clipboard"** from the menu bar.
 - Press <kbd>Shift+Cmd+C</kbd> on macOS or <kbd>Shift+Ctrl+C</kbd> on Windows or Linux.
 
+## Hiding Snippets from Subfolders
+
+<AppVersion text=">=3.7" />
+
+Select **"View"** > **"Hide Subfolder Snippets"** from the menu bar.
+
+## Compact Mode
+
+<AppVersion text=">=3.7" />
+
+Select **"View"** > **"Compact Mode"** from the menu bar.
+
 ## Formatting Snippet
 
 Snippet formatting makes the snippet code formatted.

@@ -25,3 +25,13 @@ Deleting the folder will cause all snippets in it, as well as in all sub-folders
 ## Set the Default Folder Language
 
 Call the context menu by right-clicking on the folder and select **"Default Language"**.
+
+## Setting a Custom Icon
+
+<AppVersion text=">=3.7" />
+
+Call the context menu by right-clicking on the folder and select **"Set Custom Icon"**.
+
+::: info
+To set the default icon, click the **Reset** button in the icon selection dialog window.
+:::
