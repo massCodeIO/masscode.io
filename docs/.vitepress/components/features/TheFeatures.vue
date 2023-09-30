@@ -77,7 +77,7 @@
       snippets and insert them immediately or save the selected code sections
       as a snippet.
     </FeaturesItem>
-    <FeaturesItem title="Screnshots">
+    <FeaturesItem title="Screenshots">
       Create beautiful snippet images on different backgrounds and in
       different modes.
     </FeaturesItem>
