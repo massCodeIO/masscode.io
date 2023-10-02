@@ -72,6 +72,12 @@ export default defineConfig({
           items: [
             { text: 'Markdown', link: '/documentation/markdown.md' }
           ]
+        },
+        {
+          text: 'Tools',
+          items: [
+            { text: 'Developers Tools', link: '/documentation/devtools.md' }
+          ]
         }
       ],
       '/snippets/': [
