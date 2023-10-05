@@ -2,16 +2,26 @@
 title: Latest Release
 ---
 
-# v3.8.0
+# v3.9.0
 
 ### 🚀 Enhancements
 
-- **icons:** Add DigitalOcean, Moodle and Oracle icons ([#388](https://github.com/massCodeIO/massCode/pull/388))
-- Add dev tools ([#407](https://github.com/massCodeIO/massCode/pull/407))
-- Add reload db ([#408](https://github.com/massCodeIO/massCode/pull/408))
+- **i18n:** Add new Czech translations ([#411](https://github.com/massCodeIO/massCode/pull/411))
+- **i18n:** Add Turkish locales ([#412](https://github.com/massCodeIO/massCode/pull/412))
 
-Select &quot;massCode&quot; &gt; &quot;Developer Tools&quot; or &#x60;cmd+&#x60;. or &#x60;ctrl+.&#x60;
+### 🩹 Fixes
 
-![image](https://github.com/massCodeIO/massCode/assets/17480987/0416cd0f-7e59-49b5-b35a-510ba068c9e1)
+- Devtools menu in win #415 ([#416](https://github.com/massCodeIO/massCode/pull/416), [#415](https://github.com/massCodeIO/massCode/issues/415))
+
+### 🏡 Chore
+
+- Fix locales ([#409](https://github.com/massCodeIO/massCode/pull/409))
+- Update CHANGELOG ([c9aa8de](https://github.com/massCodeIO/massCode/commit/c9aa8de))
+
+### ❤️ Contributors
+
+- Anton Reshetov ([@antonreshetov](http://github.com/antonreshetov))
+- Emircan ERKUL ([@emircanerkul](http://github.com/emircanerkul))
+- Jiří Tenora &lt;jiri.sko@gmail.com&gt;
 
 <AssetsDownload />
