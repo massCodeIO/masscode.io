@@ -40,9 +40,18 @@
       snippets. It's great for classroom use, team meetings, conferences or
       simply reviewing notes on your own.
     </FeaturesItem>
+    <FeaturesItem title="Mindmap">
+      massCode allows you to create mental maps from markdown, making the process
+      of creating and editing maps fast and intuitively understandable.
+      It's a great way to organize and structure information visually.
+    </FeaturesItem>
     <FeaturesItem title="Real-time Render for HTML & CSS">
       You can not only collect snippets, but also see the rendering result for
       HTML and CSS in real time. Test the idea or just view the result.
+    </FeaturesItem>
+    <FeaturesItem title="Developers Tools">
+      massCode provides developers with a range of convenient tools, such as: Case Converter, Slug Generator,
+      URL Parser, Hash, HMAC, Password & UUID Generators, and more.
     </FeaturesItem>
     <FeaturesItem title="Search">
       It is impossible to imagine a productive snippets manager without quick
