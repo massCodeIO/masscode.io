@@ -2,26 +2,22 @@
 title: Latest Release
 ---
 
-# v3.9.0
+# v3.10.0
 
 ### 🚀 Enhancements
 
-- **i18n:** Add new Czech translations ([#411](https://github.com/massCodeIO/massCode/pull/411))
-- **i18n:** Add Turkish locales ([#412](https://github.com/massCodeIO/massCode/pull/412))
+- **i18n:** Add French locales ([#417](https://github.com/massCodeIO/massCode/pull/417))
+- Add mindmap ([#419](https://github.com/massCodeIO/massCode/pull/419))
+
+![demo](https://github.com/massCodeIO/massCode/assets/17480987/685177e2-7b44-48d1-9d85-b7afe370ee1b)
 
 ### 🩹 Fixes
 
-- Devtools menu in win #415 ([#416](https://github.com/massCodeIO/massCode/pull/416), [#415](https://github.com/massCodeIO/massCode/issues/415))
-
-### 🏡 Chore
-
-- Fix locales ([#409](https://github.com/massCodeIO/massCode/pull/409))
-- Update CHANGELOG ([c9aa8de](https://github.com/massCodeIO/massCode/commit/c9aa8de))
+- **snippets:** Delete fragment ([8b362a0](https://github.com/massCodeIO/massCode/commit/8b362a0))
 
 ### ❤️ Contributors
 
 - Anton Reshetov ([@antonreshetov](http://github.com/antonreshetov))
-- Emircan ERKUL ([@emircanerkul](http://github.com/emircanerkul))
-- Jiří Tenora &lt;jiri.sko@gmail.com&gt;
+- Fred &lt;domaine75@gmail.com&gt;
 
 <AssetsDownload />
