@@ -26,17 +26,19 @@ However, the amount of effort needed to maintain and develop new features for th
 
 ## One-time donation via PayPal
 
-<VPButton
+<VPButton 
   href="https://paypal.me/antongithub"
   theme="brand"
   text="Go to PayPal"
 />
 
-## On-time donation via Binance
+## On-time donation via Crypto
+
+<code>TTTjJFcHwX1ZwjtnotAz5yPkyE9G88oXbm</code>
 
 <div class="crypto-qr">
-  <img :src="withBase('/usdt.png')">
-  <p>USDT</p>
+  <img :src="withBase('/usdt-trc20-bybit.svg')">
+  <strong>USDT - TRC20</strong>
 </div>
 
 <script setup>
