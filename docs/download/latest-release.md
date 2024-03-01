@@ -2,22 +2,21 @@
 title: Latest Release
 ---
 
-# v3.10.0
+# v3.11.0
 
 ### 🚀 Enhancements
 
-- **i18n:** Add French locales ([#417](https://github.com/massCodeIO/massCode/pull/417))
-- Add mindmap ([#419](https://github.com/massCodeIO/massCode/pull/419))
-
-![demo](https://github.com/massCodeIO/massCode/assets/17480987/685177e2-7b44-48d1-9d85-b7afe370ee1b)
-
-### 🩹 Fixes
-
-- **snippets:** Delete fragment ([8b362a0](https://github.com/massCodeIO/massCode/commit/8b362a0))
+- Add fuzzy search ([a0eba0a](https://github.com/massCodeIO/massCode/commit/a0eba0a))
+- **i18n:** Add new Czech translations ([3166034](https://github.com/massCodeIO/massCode/commit/3166034))
+- **i18n:** Add Persian locales ([a32dc0f](https://github.com/massCodeIO/massCode/commit/a32dc0f))
+- **i18n:** Add Polish locales ([cd44fb4](https://github.com/massCodeIO/massCode/commit/cd44fb4))
+- Add search by description ([134c424](https://github.com/massCodeIO/massCode/commit/134c424))
 
 ### ❤️ Contributors
 
 - Anton Reshetov ([@antonreshetov](http://github.com/antonreshetov))
-- Fred &lt;domaine75@gmail.com&gt;
+- Jarosław Pietras &lt;jarko2227@gmail.com&gt;
+- Alireza Ivaz ([@AlirezaIvaz](http://github.com/AlirezaIvaz))
+- Jiří Tenora &lt;jiri.sko@gmail.com&gt;
 
 <AssetsDownload />
