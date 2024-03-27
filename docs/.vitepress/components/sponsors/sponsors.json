@@ -17,6 +17,12 @@
       "url": "https://github.com/mysigmail/vue-email?ref=masscode.io",
       "img": "https://mysigmail.com/img/vue-email.png",
       "text": "A Vue unstyled components"
+    },
+    {
+      "name": "Timefall",
+      "url": "https://github.com/antonreshetov/timefall?ref=masscode.io",
+      "img": "/timefall-logo.png",
+      "text": "Time Management Tool"
     }
   ]
 }
