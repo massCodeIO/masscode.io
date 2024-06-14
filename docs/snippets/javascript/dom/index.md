@@ -21,7 +21,7 @@ const elementContains = (parent, child) =>
 const head = document.querySelector('head')
 const body = document.querySelector('body')
 
-elementContains(head, body) // true
+elementContains(head, body) // false
 ```
 
 ## Has Class
