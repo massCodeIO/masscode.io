@@ -1,19 +1,10 @@
-<template>
-  <div class="editor">
-    <div
-      ref="editorRef"
-      class="body"
-    />
-  </div>
-</template>
-
 <script setup lang="ts">
+import type CodeMirror from '@types/codemirror'
+import { computed, onMounted, ref, watch } from 'vue'
+import { useDark } from '../../composables'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material-palenight.css'
 import 'codemirror/theme/material-darker.css'
-import { computed, onMounted, ref, watch } from 'vue'
-import type CodeMirror from '@types/codemirror'
-import { useDark } from '../../composables'
 
 interface Props {
   lang: string
@@ -36,7 +27,7 @@ const theme = computed(() => {
   return isDark.value ? 'material-darker' : 'material-palenight'
 })
 
-const init = async () => {
+async function init() {
   const { default: CodeMirror } = await import('codemirror')
   await import('codemirror/mode/css/css')
   await import('codemirror/mode/htmlmixed/htmlmixed')
@@ -46,7 +37,7 @@ const init = async () => {
     mode: props.lang,
     theme: theme.value,
     lineNumbers: true,
-    scrollbarStyle: 'null'
+    scrollbarStyle: 'null',
   })
 
   editor.on('change', () => {
@@ -62,6 +53,15 @@ onMounted(() => {
   init()
 })
 </script>
+
+<template>
+  <div class="editor">
+    <div
+      ref="editorRef"
+      class="body"
+    />
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .editor {

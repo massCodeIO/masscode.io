@@ -1,9 +1,3 @@
-<template>
-  <div class="app-version">
-    {{ text }}
-  </div>
-</template>
-
 <script setup lang="ts">
 interface Props {
   text: string
@@ -11,6 +5,12 @@ interface Props {
 
 defineProps<Props>()
 </script>
+
+<template>
+  <div class="app-version">
+    {{ text }}
+  </div>
+</template>
 
 <style lang="scss">
 .app-version {

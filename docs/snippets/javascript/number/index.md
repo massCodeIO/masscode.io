@@ -11,14 +11,14 @@ description: Collection of JavaScript Number snippets
 This snippet can be used to check whether a provided value is a number.
 
 ```js
-const isNumber = n => !isNaN(parseFloat(n)) && isFinite(n)
+const isNumber = (n) => !isNaN(Number.parseFloat(n)) && isFinite(n);
 ```
 
 #### Example
 
 ```js
-isNumber('1') // false
-isNumber(1) // true
+isNumber("1"); // false
+isNumber(1); // true
 ```
 
 ## Is Square
@@ -26,13 +26,13 @@ isNumber(1) // true
 This snippet can be used to check if a number is a square.
 
 ```js
-const isSquare = n => n >= 0 && Math.sqrt(n) % 1 === 0
+const isSquare = (n) => n >= 0 && Math.sqrt(n) % 1 === 0;
 ```
 
 #### Example
 
 ```js
-isSquare(36) // true
+isSquare(36); // true
 ```
 
 ## Round
@@ -40,12 +40,13 @@ isSquare(36) // true
 This snippet can be used to round a number to a specified number of digits.
 
 ```js
-const round = (n, decimals = 0) =>
-  Number(`${Math.round(`${n}e${decimals}`)}e-${decimals}`)
+function round(n, decimals = 0) {
+  return Number(`${Math.round(`${n}e${decimals}`)}e-${decimals}`);
+}
 ```
 
 #### Example
 
 ```js
-round(24.99, 1) // 25
+round(24.99, 1); // 25
 ```

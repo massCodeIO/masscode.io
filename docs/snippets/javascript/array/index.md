@@ -11,13 +11,13 @@ description: Collection of JavaScript Array snippets
 This snippet removes false values from an array.
 
 ```js
-const compact = arr => arr.filter(Boolean)
+const compact = (arr) => arr.filter(Boolean);
 ```
 
 #### Example
 
 ```js
-compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34])
+compact([0, 1, false, 2, "", 3, "a", "e" * 23, Number.NaN, "s", 34]);
 // [ 1, 2, 3, 'a', 's', 34 ]
 ```
 
@@ -26,16 +26,16 @@ compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34])
 This snippet can be used to get an array with elements that are included in two other arrays.
 
 ```js
-const intersection = (a, b) => {
-  const s = new Set(b)
-  return a.filter(i => s.has(i))
+function intersection(a, b) {
+  const s = new Set(b);
+  return a.filter((i) => s.has(i));
 }
 ```
 
 #### Example
 
 ```js
-intersection([1, 2, 3], [4, 3, 2]) // [2, 3]
+intersection([1, 2, 3], [4, 3, 2]); // [2, 3]
 ```
 
 ## Intersection by
@@ -43,16 +43,16 @@ intersection([1, 2, 3], [4, 3, 2]) // [2, 3]
 This snippet can be used to return a list of elements that exist in both arrays, after a particular function has been executed to each element of both arrays.
 
 ```js
-const intersectionBy = (a, b, fn) => {
-  const s = new Set(b.map(fn))
-  return a.filter(x => s.has(fn(x)))
+function intersectionBy(a, b, fn) {
+  const s = new Set(b.map(fn));
+  return a.filter((x) => s.has(fn(x)));
 }
 ```
 
 #### Example
 
 ```js
-intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor) // [2.1]
+intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [2.1]
 ```
 
 ## Intersection with
@@ -60,18 +60,19 @@ intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor) // [2.1]
 This snippet can be used to return a list of elements that exist in both arrays by using a comparator function.
 
 ```js
-const intersectionWith = (a, b, comp) =>
-  a.filter(x => b.findIndex(y => comp(x, y)) !== -1)
+function intersectionWith(a, b, comp) {
+  return a.filter((x) => b.findIndex((y) => comp(x, y)) !== -1);
+}
 ```
 
 #### Example
 
 ```js
-const arr1 = [1, 1.2, 1.5, 3, 0]
-const arr2 = [1.9, 3, 0, 3.9]
-const fn = (a, b) => Math.round(a) === Math.round(b)
+const arr1 = [1, 1.2, 1.5, 3, 0];
+const arr2 = [1.9, 3, 0, 3.9];
+const fn = (a, b) => Math.round(a) === Math.round(b);
 
-intersectionWith(arr1, arr2, (a, b) => fn(a, b)) // [1.5, 3, 0]
+intersectionWith(arr1, arr2, (a, b) => fn(a, b)); // [1.5, 3, 0]
 ```
 
 ## Is null
@@ -79,13 +80,13 @@ intersectionWith(arr1, arr2, (a, b) => fn(a, b)) // [1.5, 3, 0]
 This snippet can be used to check whether a value is `null`.
 
 ```js
-const isNull = val => val === null
+const isNull = (val) => val === null;
 ```
 
 #### Example
 
 ```js
-isNull(null) // true
+isNull(null); // true
 ```
 
 ## Last
@@ -93,13 +94,13 @@ isNull(null) // true
 This snippet returns the last element of an array.
 
 ```js
-const last = arr => arr[arr.length - 1]
+const last = (arr) => arr[arr.length - 1];
 ```
 
 #### Example
 
 ```js
-last([1, 2, 3, 4]) // 4
+last([1, 2, 3, 4]); // 4
 ```
 
 ## Random
@@ -107,13 +108,13 @@ last([1, 2, 3, 4]) // 4
 This snippet can be used to get a random number from an array.
 
 ```js
-const random = arr => arr[Math.floor(Math.random() * arr.length)]
+const random = (arr) => arr[Math.floor(Math.random() * arr.length)];
 ```
 
 #### Example
 
 ```js
-random([3, 1, 4, 11]) // 4
+random([3, 1, 4, 11]); // 4
 ```
 
 ## With Length
@@ -121,13 +122,13 @@ random([3, 1, 4, 11]) // 4
 This snippet get an array with specified length.
 
 ```js
-const withLength = n => new Array(n).fill('')
+const withLength = (n) => new Array(n).fill("");
 ```
 
 #### Example
 
 ```js
-withLength(5) // ['', '', '', '', '']
+withLength(5); // ['', '', '', '', '']
 ```
 
 ## Uniq
@@ -135,11 +136,11 @@ withLength(5) // ['', '', '', '', '']
 This snippet get uniq values in an array.
 
 ```js
-const uniq = arr => [...new Set(arr)]
+const uniq = (arr) => [...new Set(arr)];
 ```
 
 #### Example
 
 ```js
-uniq(1, 1, 2, 3, 4, 4) // [1, 2, 3, 4]
+uniq(1, 1, 2, 3, 4, 4); // [1, 2, 3, 4]
 ```

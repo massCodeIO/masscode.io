@@ -21,7 +21,6 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: ogDescription }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'google-site-verification', content: gsv }],
-    ['script', { 'defer': '', 'data-domain': 'masscode.io', 'src': 'https://m.masscode.io/js/script.js' }]
   ],
 
   themeConfig: {
@@ -35,20 +34,10 @@ export default defineConfig({
         text: version,
         items: [
           { text: 'Download', link: '/download/' },
-          { text: 'Change Log', link: 'https://github.com/massCodeIO/massCode/releases' }
-        ]
-      }
+          { text: 'Change Log', link: 'https://github.com/massCodeIO/massCode/releases' },
+        ],
+      },
     ],
-
-    socialLinks: [
-      { icon: 'twitter', link: 'https://twitter.com/anton_reshetov' },
-      { icon: 'github', link: 'https://github.com/massCodeIO/massCode' }
-    ],
-
-    footer: {
-      message: 'massCode released under the AGPL v3 License.<br>Snippet collection released under the CC-BY-4.0 License.',
-      copyright: 'Copyright © 2019-present Anton Reshetov'
-    },
 
     sidebar: {
       '/documentation/': [
@@ -64,65 +53,73 @@ export default defineConfig({
             { text: 'Description', link: '/documentation/description' },
             { text: 'Search', link: '/documentation/search' },
             { text: 'Storage', link: '/documentation/storage' },
-            { text: 'Sync', link: '/documentation/sync' }
-          ]
+            { text: 'Sync', link: '/documentation/sync' },
+          ],
         },
         {
           text: 'Markdown',
           items: [
-            { text: 'Markdown', link: '/documentation/markdown.md' }
-          ]
+            { text: 'Markdown', link: '/documentation/markdown.md' },
+          ],
         },
         {
           text: 'Tools',
           items: [
-            { text: 'Developers Tools', link: '/documentation/devtools.md' }
-          ]
-        }
+            { text: 'Developers Tools', link: '/documentation/devtools.md' },
+          ],
+        },
       ],
       '/snippets/': [
         {
           text: 'UI',
           collapsed: false,
-          collapsible: true,
           items: [
             { text: 'Buttons', link: '/snippets/ui/buttons/' },
             { text: 'Checkboxes', link: '/snippets/ui/checkboxes/' },
             { text: 'Effects', link: '/snippets/ui/effects/' },
             { text: 'Inputs', link: '/snippets/ui/inputs/' },
             { text: 'Loaders', link: '/snippets/ui/loaders/' },
-            { text: 'Switches', link: '/snippets/ui/switches/' }
-          ]
+            { text: 'Switches', link: '/snippets/ui/switches/' },
+          ],
         },
         {
           text: 'JavaScript',
           collapsed: false,
-          collapsible: true,
           items: [
             { text: 'Array', link: '/snippets/javascript/array/' },
             { text: 'DOM', link: '/snippets/javascript/dom/' },
             { text: 'Number', link: '/snippets/javascript/number/' },
             { text: 'Object', link: '/snippets/javascript/object/' },
-            { text: 'String', link: '/snippets/javascript/string/' }
-          ]
-        }
-      ]
+            { text: 'String', link: '/snippets/javascript/string/' },
+          ],
+        },
+      ],
+    },
+
+    socialLinks: [
+      { icon: 'twitter', link: 'https://twitter.com/anton_reshetov' },
+      { icon: 'github', link: 'https://github.com/massCodeIO/massCode' },
+    ],
+
+    footer: {
+      message: 'massCode released under the AGPL v3 License.<br>Snippet collection released under the CC-BY-4.0 License.',
+      copyright: 'Copyright © 2019-present Anton Reshetov',
     },
 
     editLink: {
       pattern: 'https://github.com/massCodeIO/masscode.io/edit/master/docs/:path',
-      text: 'Edit this page on GitHub'
+      text: 'Edit this page on GitHub',
     },
 
     carbonAds: {
       code: 'CE7DEKQM',
-      placement: 'masscodeio'
+      placement: 'masscodeio',
     },
 
     algolia: {
       appId: '92Q94XIWQY',
       apiKey: '2d71b8791faff1435f75479ffbea2f2e',
-      indexName: 'masscode'
-    }
-  }
+      indexName: 'masscode',
+    },
+  },
 })

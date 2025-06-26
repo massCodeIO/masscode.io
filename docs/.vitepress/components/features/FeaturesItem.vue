@@ -1,3 +1,11 @@
+<script setup lang="ts">
+interface Props {
+  title: string
+}
+
+defineProps<Props>()
+</script>
+
 <template>
   <div class="features-item">
     <div class="title">
@@ -8,14 +16,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-interface Props {
-  title: string
-}
-
-defineProps<Props>()
-</script>
 
 <style lang="scss" scoped>
 .features-item {

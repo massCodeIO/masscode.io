@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import TheFeatures from './features/TheFeatures.vue'
+import SponsorsGroup from './sponsors/SponsorsGroup.vue'
+</script>
+
 <template>
   <div class="home">
     <section id="features">
@@ -11,11 +16,6 @@
     </section>
   </div>
 </template>
-
-<script setup lang="ts">
-import TheFeatures from './features/TheFeatures.vue'
-import SponsorsGroup from './sponsors/SponsorsGroup.vue'
-</script>
 
 <style lang="scss" scoped>
 section {

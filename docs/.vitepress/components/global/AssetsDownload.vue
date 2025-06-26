@@ -1,3 +1,22 @@
+<script setup lang="ts">
+import { ElDialog, ElInput } from 'element-plus'
+import assets from '../../_data/assets.json'
+import { useDownloadAssets } from '../../composables'
+
+import 'element-plus/theme-chalk/base.css'
+import 'element-plus/theme-chalk/el-overlay.css'
+import 'element-plus/theme-chalk/el-dialog.css'
+import 'element-plus/theme-chalk/el-input.css'
+
+const {
+  isShowDialog,
+  price,
+  dialogButtonText,
+  onDownloadAssets,
+  onShowDialog,
+} = useDownloadAssets()
+</script>
+
 <template>
   <h2>macOS</h2>
 
@@ -66,23 +85,4 @@
   </ClientOnly>
 </template>
 
-<script setup lang="ts">
-import { ElDialog, ElInput } from 'element-plus'
-import { useDownloadAssets } from '../../composables'
-import assets from '../../_data/assets.json'
-
-import 'element-plus/theme-chalk/base.css'
-import 'element-plus/theme-chalk/el-overlay.css'
-import 'element-plus/theme-chalk/el-dialog.css'
-import 'element-plus/theme-chalk/el-input.css'
-
-const {
-  isShowDialog,
-  price,
-  dialogButtonText,
-  onDownloadAssets,
-  onShowDialog
-} = useDownloadAssets()
-</script>
-
-<style lang="scss" scoped></style>
+<!-- <style lang="scss" scoped></style> -->

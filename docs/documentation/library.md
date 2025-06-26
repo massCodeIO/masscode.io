@@ -16,8 +16,8 @@ This folder contains all your snippets.
 
 ## Trash
 
-This is where the snippets you delete get in. You can completely delete snippets in this folder by calling the context menu on **"Trash"** and selecting **"Empty Trash"**. 
+This is where the snippets you delete get in. You can completely delete snippets in this folder by calling the context menu on **"Trash"** and selecting **"Empty Trash"**.
 
 ::: warning
-Cleaning the trash will result in the complete removal of snippets. This action cannot be undone. 
+Cleaning the trash will result in the complete removal of snippets. This action cannot be undone.
 :::

@@ -1,13 +1,13 @@
-import { basename, dirname, join } from 'path'
+import type { SnippetUI, SnippetUICollection } from '../types'
+import { basename, dirname, join } from 'node:path'
+import chokidar from 'chokidar'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
-import chokidar from 'chokidar'
-import type { SnippetUI, SnippetUICollection } from '../types'
 
 const UI_SNIPPETS_DIR = join(__dirname, '../snippets/ui')
 const DIST = join(__dirname, '../.vitepress/_data')
 
-const generate = (path: string) => {
+function generate(path: string) {
   fs.ensureDirSync(DIST)
   const collection: SnippetUICollection[] = []
 
@@ -18,7 +18,7 @@ const generate = (path: string) => {
   dirs.forEach((i) => {
     collection.push({
       category: i,
-      snippets: []
+      snippets: [],
     })
   })
 
@@ -37,7 +37,7 @@ const generate = (path: string) => {
           author: '',
           name: '',
           css: '',
-          html: ''
+          html: '',
         }
 
         innerFiles.forEach((f) => {
