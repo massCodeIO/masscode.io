@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import FeaturesItem from './FeaturesItem.vue'
+</script>
+
 <template>
   <div class="features">
     <FeaturesItem title="Organization">
@@ -97,10 +101,6 @@
     </FeaturesItem>
   </div>
 </template>
-
-<script setup lang="ts">
-import FeaturesItem from './FeaturesItem.vue'
-</script>
 
 <style lang="scss" scoped>
 .features {

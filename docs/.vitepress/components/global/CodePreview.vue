@@ -1,22 +1,3 @@
-<template>
-  <div
-    class="code-preview"
-    :class="{
-      'is-dark': isDark,
-      'is-gray': isGray,
-    }"
-  >
-    <div class="body">
-      <iframe
-        :srcDoc="srcDoc"
-        frameborder="0"
-        height="100%"
-        width="100%"
-      />
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useDark } from '../../composables'
@@ -68,9 +49,28 @@ watch(
 </html>
 `
   },
-  { immediate: true }
+  { immediate: true },
 )
 </script>
+
+<template>
+  <div
+    class="code-preview"
+    :class="{
+      'is-dark': isDark,
+      'is-gray': isGray,
+    }"
+  >
+    <div class="body">
+      <iframe
+        :srcDoc="srcDoc"
+        frameborder="0"
+        height="100%"
+        width="100%"
+      />
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .code-preview {

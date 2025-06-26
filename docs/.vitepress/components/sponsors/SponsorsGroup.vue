@@ -1,3 +1,56 @@
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue'
+import sponsorsData from './sponsors.json'
+
+interface Sponsor {
+  url: string
+  img: string
+  name: string
+  text?: string
+}
+
+interface SponsorData {
+  special: Sponsor[]
+}
+
+interface Props {
+  title?: string
+  tier: keyof SponsorData
+  placement?: 'home' | 'sidebar'
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  placement: 'home',
+})
+
+const data = ref<SponsorData>(sponsorsData)
+const isShow = ref(false)
+
+const sponsorsRef = ref<HTMLElement>()
+
+function showSponsors() {
+  if (props.placement === 'sidebar')
+    return
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        isShow.value = true
+        observer.disconnect()
+      }
+    },
+    { rootMargin: '0px 0px 300px 0px' },
+  )
+  observer.observe(sponsorsRef.value)
+
+  onUnmounted(() => observer.disconnect())
+}
+
+onMounted(async () => {
+  showSponsors()
+})
+</script>
+
 <template>
   <div
     ref="sponsorsRef"
@@ -30,59 +83,6 @@
     </template>
   </div>
 </template>
-
-<script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
-import sponsorsData from './sponsors.json'
-
-interface Sponsor {
-  url: string
-  img: string
-  name: string
-  text?: string
-}
-
-interface SponsorData {
-  special: Sponsor[]
-}
-
-interface Props {
-  title?: string
-  tier: keyof SponsorData
-  placement?: 'home' | 'sidebar'
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  placement: 'home'
-})
-
-const data = ref<SponsorData>(sponsorsData)
-const isShow = ref(false)
-
-const sponsorsRef = ref<HTMLElement>()
-
-const showSponsors = () => {
-  if (props.placement === 'sidebar')
-    return
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      if (entries[0].isIntersecting) {
-        isShow.value = true
-        observer.disconnect()
-      }
-    },
-    { rootMargin: '0px 0px 300px 0px' }
-  )
-  observer.observe(sponsorsRef.value)
-
-  onUnmounted(() => observer.disconnect())
-}
-
-onMounted(async () => {
-  showSponsors()
-})
-</script>
 
 <style lang="scss" scoped>
 .sponsors {

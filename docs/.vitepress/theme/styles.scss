@@ -15,17 +15,13 @@ code, kbd {
 }
 
 kbd {
-  background-color: var(--vp-c-gray-light-4);
+  background-color: var(--vp-c-gray-3);
 }
 
 svg {
   display: inline-block;
 }
 
-.wrapper {
-  max-width: 1152px;
-  margin: 0 auto;
-}
 
 .link {
   color: var(--vp-c-brand);
@@ -39,7 +35,8 @@ svg {
 
 .is-home {
   code {
-    background-color: var(--vp-c-gray-light-4);
+    background-color: var(--vp-c-gray-3) !important;
+    color: var(--vp-c-text-1) !important;
   }
 }
 
@@ -47,16 +44,16 @@ svg {
 .dark {
   .is-home {
     code {
-      background-color: var(--vp-c-gray-dark-5);
+      background-color: var(--vp-c-gray-3) !important;
     }
   }
 
   svg {
-    fill: var(--vp-c-text-1);
+    fill: var(--vp-c-text-1) !important;
   }
 
   kbd {
-    background-color: var(--vp-c-gray-dark-3);
+    background-color: var(--vp-c-gray-2) !important;
   }
 }
 
@@ -82,4 +79,8 @@ svg {
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+
+.VPButton {
+  text-decoration: none !important;
 }

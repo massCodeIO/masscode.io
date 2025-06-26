@@ -1,3 +1,22 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+
+interface Props {
+  href: string
+}
+
+const props = defineProps<Props>()
+
+const isExternal = computed(() => props.href && /^[a-z]+:/.test(props.href))
+
+const component = computed(() => {
+  if (props.tag)
+    return props.tag
+
+  return props.href ? 'a' : 'button'
+})
+</script>
+
 <template>
   <span class="app-link">
     <component
@@ -28,30 +47,12 @@
   </span>
 </template>
 
-<script setup lang="ts">
-import { computed } from 'vue'
-
-interface Props {
-  href: string
-}
-
-const props = defineProps<Props>()
-
-const isExternal = computed(() => props.href && /^[a-z]+:/.test(props.href))
-
-const component = computed(() => {
-  if (props.tag)
-    return props.tag
-
-  return props.href ? 'a' : 'button'
-})
-</script>
-
 <style lang="scss">
 .app-link {
   display: inline-flex;
   a {
     color: var(--vp-c-brand);
+    text-decoration: none;
     &:hover {
         color: var(--vp-button-brand-hover-bg);
       }

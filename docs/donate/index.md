@@ -26,7 +26,7 @@ However, the amount of effort needed to maintain and develop new features for th
 
 ## One-time donation via PayPal
 
-<VPButton 
+<VPButton
   href="https://paypal.me/antongithub"
   theme="brand"
   text="Go to PayPal"

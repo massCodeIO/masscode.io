@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
+    "jsx": "preserve",
     "baseUrl": ".",
     "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "jsx": "preserve",
+    "esModuleInterop": true
   },
   "include": ["./docs/.vitepress/**/*.vue"],
   "exclude": ["node_modules"]

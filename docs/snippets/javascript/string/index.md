@@ -11,14 +11,14 @@ description: Collection of JavaScript String snippets
 This snippet returns the length of a string in bytes.
 
 ```js
-const byteSize = str => new Blob([str]).size
+const byteSize = (str) => new Blob([str]).size;
 ```
 
 #### Example
 
 ```js
-byteSize('💪') // 4
-byteSize('JavaScript') // 10
+byteSize("💪"); // 4
+byteSize("JavaScript"); // 10
 ```
 
 ## Capitalize
@@ -26,13 +26,13 @@ byteSize('JavaScript') // 10
 This snippet capitalizes the first letter of a string.
 
 ```js
-const capitalize = ([first, ...rest]) => first.toUpperCase() + rest.join('')
+const capitalize = ([first, ...rest]) => first.toUpperCase() + rest.join("");
 ```
 
 #### Example
 
 ```js
-capitalize('fooBar') // 'FooBar'
+capitalize("fooBar"); // 'FooBar'
 ```
 
 ## Capitalize Every Word
@@ -40,14 +40,15 @@ capitalize('fooBar') // 'FooBar'
 This snippet capitalizes the first letter of every word in a given string.
 
 ```js
-const capitalizeEveryWord = str =>
-  str.replace(/\b[a-z]/g, char => char.toUpperCase())
+function capitalizeEveryWord(str) {
+  return str.replace(/\b[a-z]/g, (char) => char.toUpperCase());
+}
 ```
 
 #### Example
 
 ```js
-capitalizeEveryWord('foo bar') // 'Foo Bar'
+capitalizeEveryWord("foo bar"); // 'Foo Bar'
 ```
 
 ## Decapitalize
@@ -55,13 +56,13 @@ capitalizeEveryWord('foo bar') // 'Foo Bar'
 This snippet turns the first letter of a string into lowercase.
 
 ```js
-const decapitalize = ([first, ...rest]) => first.toLowerCase() + rest.join('')
+const decapitalize = ([first, ...rest]) => first.toLowerCase() + rest.join("");
 ```
 
 #### Example
 
 ```js
-decapitalize('FooBar') // 'fooBar'
+decapitalize("FooBar"); // 'fooBar'
 ```
 
 ## Is String
@@ -69,13 +70,13 @@ decapitalize('FooBar') // 'fooBar'
 This snippet can be used to check whether an argument is a string.
 
 ```js
-const isString = val => typeof val === 'string'
+const isString = (val) => typeof val === "string";
 ```
 
 #### Example
 
 ```js
-isString('5') // true
+isString("5"); // true
 ```
 
 ## Is Lower Case
@@ -83,14 +84,14 @@ isString('5') // true
 This snippet can be used to determine whether a string is lower case.
 
 ```js
-const isLowerCase = str => str === str.toLowerCase()
+const isLowerCase = (str) => str === str.toLowerCase();
 ```
 
 #### Example
 
 ```js
-isLowerCase('some') // true
-isLowerCase('RanDom') // false
+isLowerCase("some"); // true
+isLowerCase("RanDom"); // false
 ```
 
 ## Is Upper Case
@@ -98,14 +99,14 @@ isLowerCase('RanDom') // false
 This snippet can be used to check whether a string is upper case.
 
 ```js
-const isUpperCase = str => str === str.toUpperCase()
+const isUpperCase = (str) => str === str.toUpperCase();
 ```
 
 #### Example
 
 ```js
-isUpperCase('SOME') // true
-isLowerCase('RanDom') // true
+isUpperCase("SOME"); // true
+isLowerCase("RanDom"); // true
 ```
 
 ## Reverse
@@ -113,11 +114,11 @@ isLowerCase('RanDom') // true
 This snippet can be used to reverse a string.
 
 ```js
-const reverseString = str => [...str].reverse().join('')
+const reverseString = (str) => [...str].reverse().join("");
 ```
 
 #### Example
 
 ```js
-reverseString('some') // 'meos'
+reverseString("some"); // 'meos'
 ```

@@ -3,7 +3,7 @@ export interface SnippetUI {
   author: string
   name: string
   html: string
-  css: string,
+  css: string
   dateCreated?: number
   isDark?: boolean
   isGray?: boolean

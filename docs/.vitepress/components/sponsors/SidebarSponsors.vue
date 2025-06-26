@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import SponsorsGroup from './SponsorsGroup.vue'
+</script>
+
 <template>
   <div class="sidebar-sponsors">
     <SponsorsGroup
@@ -6,10 +10,6 @@
     />
   </div>
 </template>
-
-<script setup lang="ts">
-import SponsorsGroup from './SponsorsGroup.vue'
-</script>
 
 <style lang="scss" scoped>
 .sidebar-sponsors {

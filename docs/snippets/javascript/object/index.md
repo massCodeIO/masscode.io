@@ -11,13 +11,13 @@ description: Collection of JavaScript Object snippets
 This snippet can be used to sort object keys.
 
 ```js
-const sortObjKey = (obj) => {
+function sortObjKey(obj) {
   return Object.keys(obj)
     .sort()
     .reduce((acc, key) => {
-      acc[key] = obj[key]
-      return acc
-    }, {})
+      acc[key] = obj[key];
+      return acc;
+    }, {});
 }
 ```
 
@@ -25,10 +25,10 @@ const sortObjKey = (obj) => {
 
 ```js
 const unsorted = {
-  b: 'foo',
-  c: 'bar',
-  a: 'baz'
-}
+  b: "foo",
+  c: "bar",
+  a: "baz",
+};
 
-sortObjKey(unsorted) // {a: 'baz', b: 'foo', c: 'bar'}
+sortObjKey(unsorted); // {a: 'baz', b: 'foo', c: 'bar'}
 ```

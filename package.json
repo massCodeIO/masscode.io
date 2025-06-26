@@ -6,20 +6,52 @@
     "name": "Anton Reshetov",
     "url": "https://github.com/antonreshetov"
   },
-  "repository": "https://github.com/massCodeIO/masscode.io",
   "license": "MIT",
-  "main": "index.js",
+  "repository": "https://github.com/massCodeIO/masscode.io",
+  "engines": {
+    "pnpm": ">=9.0.0"
+  },
   "scripts": {
     "dev": "vitepress dev docs",
     "dev:ui-collection": "run-p watch:ui-collection dev",
-    "watch:ui-collection": "ts-node docs/scripts/generate-ui-collection.ts",
-    "generate:assets": "ts-node docs/scripts/generate-assets.ts",
     "build": "vitepress build docs",
-    "build:assets": "npm run generate:assets && npm run build",
-    "serve": "vitepress serve docs --port 3000",
+    "preview": "vitepress preview docs",
+    "generate:assets": "bun docs/scripts/generate-assets.ts",
+    "watch:ui-collection": "bun docs/scripts/generate-ui-collection.ts",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepare": "husky install"
+    "lint:fix": "eslint --fix .",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "codemirror": "5",
+    "element-plus": "^2.10.2",
+    "vue": "^3.5.17",
+    "vue-gtag": "3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.16.1",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/codemirror": "^5.60.16",
+    "@types/fs-extra": "^11.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
+    "axios": "^1.10.0",
+    "chokidar": "^4.0.3",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.29.0",
+    "fs-extra": "^11.3.0",
+    "gray-matter": "^4.0.3",
+    "handlebars": "^4.7.8",
+    "lint-staged": "^16.1.2",
+    "sass": "^1.89.2",
+    "simple-git-hooks": "^2.13.0",
+    "typescript": "^5.8.3",
+    "vitepress": "^1.6.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit $1"
   },
   "lint-staged": {
     "*.{js,ts,vue,md}": [
@@ -29,35 +61,7 @@
       "prettier --write"
     ]
   },
-  "dependencies": {
-    "axios": "^0.27.2",
-    "codemirror": "^5.65.7",
-    "element-plus": "^2.2.14",
-    "vue-gtag": "^2.0.1"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "^0.26.1",
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
-    "@types/codemirror": "^5.60.5",
-    "@types/fs-extra": "^9.0.13",
-    "chokidar": "^3.5.3",
-    "dotenv": "^16.0.1",
-    "eslint": "^8.22.0",
-    "fs-extra": "^10.1.0",
-    "gray-matter": "^4.0.3",
-    "handlebars": "^4.7.7",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.5.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.7.1",
-    "sass": "^1.54.4",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.7.4",
-    "vitepress": "1.0.0-alpha.5",
-    "vue": "^3.2.37"
-  },
   "volta": {
-    "node": "16.16.0"
+    "node": "20.16.0"
   }
 }

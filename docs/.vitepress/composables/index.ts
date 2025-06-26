@@ -1,6 +1,6 @@
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 
-export const useDark = () => {
+export function useDark() {
   const isDark = ref(false)
 
   const checkIsDark = () => {
@@ -16,7 +16,7 @@ export const useDark = () => {
 
     observer.observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ['class']
+      attributeFilter: ['class'],
     })
 
     onBeforeUnmount(() => observer.disconnect())
@@ -25,7 +25,7 @@ export const useDark = () => {
   return { isDark }
 }
 
-export const useDownloadAssets = () => {
+export function useDownloadAssets() {
   const isShowDialog = ref(false)
   const price = ref()
   const url = ref()
@@ -60,7 +60,6 @@ export const useDownloadAssets = () => {
     onShowDialog,
     onDownloadAssets,
     price,
-    isShowDialog
+    isShowDialog,
   }
 }
-

@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import type { SnippetUICollection } from '../../../types'
+import snippetsUI from '../../_data/ui.json'
+import AppLink from './AppLink.vue'
+
+interface Props {
+  category: string
+}
+
+const props = defineProps<Props>()
+
+const snippets = (snippetsUI as SnippetUICollection[])
+  .find(i => i.category === props.category)
+  .snippets
+  .sort((a, b) => (a.dateCreated < b.dateCreated ? 1 : -1))
+</script>
+
 <template>
   <div class="collection">
     <div
@@ -31,22 +48,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import snippetsUI from '../../_data/ui.json'
-import type { SnippetUICollection } from '../../../types'
-import AppLink from './AppLink.vue'
-
-interface Props {
-  category: string
-}
-
-const props = defineProps<Props>()
-
-const snippets = (snippetsUI as SnippetUICollection[])
-  .find(i => i.category === props.category)
-  .snippets.sort((a, b) => (a.dateCreated < b.dateCreated ? 1 : -1))
-</script>
 
 <style lang="scss" scoped>
 .collection {
