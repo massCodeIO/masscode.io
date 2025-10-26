@@ -20,6 +20,8 @@ const {
 <template>
   <h2>macOS</h2>
 
+  <p><strong>Note:</strong> The macOS build is currently unsigned. <a href="https://github.com/massCodeIO/massCode?tab=readme-ov-file#troubleshooting">Follow this guide</a> to successfully open the app after install.</p>
+
   <VPButton
     :href="assets.macM1"
     theme="brand"
