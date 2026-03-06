@@ -16,18 +16,16 @@ defineProps<Props>()
 .app-version {
   display: inline-flex;
   padding: 0 6px;
-  background: var(--vp-c-yellow-light);
+  background: rgb(236, 236, 30);
   font-size: 12px;
   font-family: var(--font-code);
   border-radius: 3px;
-  @media (prefers-color-scheme: dark) {
-     background: var(--vp-c-yellow-dark);
-  }
 }
 
-.dark {
+html.dark {
   .app-version {
-     background: var(--vp-c-yellow-darker);
+    background: rgb(180, 180, 24);
+    color: black;
   }
 }
 </style>

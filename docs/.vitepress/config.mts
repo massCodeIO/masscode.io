@@ -54,6 +54,7 @@ export default defineConfig({
             { text: 'Search', link: '/documentation/search' },
             { text: 'Storage', link: '/documentation/storage' },
             { text: 'Sync', link: '/documentation/sync' },
+            { text: 'Themes', link: '/documentation/themes' },
           ],
         },
         {

@@ -5,96 +5,82 @@ import FeaturesItem from './FeaturesItem.vue'
 <template>
   <div class="features">
     <FeaturesItem title="Organization">
-      massCode allows you to organize snippets using multi-level folders as
-      well as tags. Each snippet has fragments - tabs, which gives even
-      greater level of organization.
+      Organize your snippets with multi-level folders and tags. Each snippet can contain multiple fragments (tabs), giving you fine-grained control over structure and grouping.
     </FeaturesItem>
     <FeaturesItem title="Editor">
-      massCode uses
-      <AppLink href="https://github.com/codemirror/codemirror5">
-        Codemirror
-      </AppLink>
-      as the basis for the editor and <code>.tmLanguage</code> as the grammar for syntax
-      highlighting. This tandem opens the door to over
-      <AppLink href="https://github.com/github/linguist/blob/master/vendor/README.md">
-        600
-      </AppLink>
-      existing grammars. The application currently supports more than 160
-      grammars. In addition to <code>.tmLanguage</code>, the application
-      supports <code>.tmTheme</code> for themes. There is also support for
-      <AppLink href="https://prettier.io/">
-        Prettier
-      </AppLink>
-      for code formatting.
+      Built on <AppLink href="https://github.com/codemirror/codemirror5">
+        CodeMirror
+      </AppLink> with <code>.tmLanguage</code> grammars for syntax highlighting.
+      <ul>
+        <li>
+          Supports over <AppLink href="https://github.com/github/linguist/blob/master/vendor/README.md">
+            600 grammars
+          </AppLink>, with 160+ available out of the box.
+        </li>
+        <li>
+          Integrated <AppLink href="https://prettier.io">
+            Prettier
+          </AppLink> for clean, consistent code formatting.
+        </li>
+      </ul>
+    </FeaturesItem>
+    <FeaturesItem title="Real-time HTML & CSS Preview">
+      Write and instantly preview HTML and CSS snippets. Perfect for prototyping, testing ideas, or quick visual checks.
     </FeaturesItem>
     <FeaturesItem title="Markdown">
-      massCode allows you to write in Markdown and provide support to syntax
-      highlighting, tables, list and other formatting. Also massCode supports
-      <AppLink
-        href="https://mermaid-js.github.io/mermaid/#/"
-        :external="true"
-      >
-        Mermaid
-      </AppLink>
-      - diagramming and charting tool that renders Markdown-inspired text
-      definitions to create and modify diagrams dynamically.
+      Full Markdown support with syntax highlighting, tables, lists, and more.
+      <ul>
+        <li>
+          Integrated <AppLink href="https://mermaid-js.github.io/mermaid/#">
+            Mermaid
+          </AppLink> for dynamic diagrams and charts.
+        </li>
+      </ul>
     </FeaturesItem>
     <FeaturesItem title="Presentation Mode">
-      massCode allows you to make a presentation out of a sequence of
-      snippets. It's great for classroom use, team meetings, conferences or
-      simply reviewing notes on your own.
+      Turn a sequence of snippets into a presentation. Useful for classrooms, team meetings, conference talks, or simply walking through your own notes.
     </FeaturesItem>
     <FeaturesItem title="Mindmap">
-      massCode allows you to create mental maps from markdown, making the process
-      of creating and editing maps fast and intuitively understandable.
-      It's a great way to organize and structure information visually.
+      Generate mind maps from Markdown. Fast, intuitive, and ideal for structuring and visualizing ideas.
     </FeaturesItem>
-    <FeaturesItem title="Real-time Render for HTML & CSS">
-      You can not only collect snippets, but also see the rendering result for
-      HTML and CSS in real time. Test the idea or just view the result.
+    <FeaturesItem
+      title="Developer Tools"
+      style="grid-column: 1 / 3;"
+    >
+      Handy built-in utilities for everyday dev tasks:
+      <ul>
+        <li><strong>Text Tools</strong>: Case Converter, Slug Generator, URL Parser</li>
+        <li><strong>Crypto & Security</strong>: Hash/HMAC, Password Generator, UUID</li>
+        <li><strong>Encoders/Decoders</strong>: URL, Base64, JSON ⇄ TOML/XML/YAML, Text ⇄ ASCII/Binary/Unicode, Color Converter</li>
+      </ul>
     </FeaturesItem>
-    <FeaturesItem title="Developers Tools">
-      massCode provides developers with a range of convenient tools, such as: Case Converter, Slug Generator,
-      URL Parser, Hash, HMAC, Password & UUID Generators, and more.
-    </FeaturesItem>
-    <FeaturesItem title="Search">
-      It is impossible to imagine a productive snippets manager without quick
-      access to snippets. Therefore massCode has a fast full-text search with
-      highlighting of the search query.
-    </FeaturesItem>
-    <FeaturesItem title="Autosave">
-      massCode automatically saves any changes you make during work, so you
-      don't have to worry about losing changes.
-    </FeaturesItem>
-    <FeaturesItem title="Sync">
-      You can use any service that provides cloud synchronization, such as
-      iCloud Drive, Google Drive, Dropbox or other similar.
-    </FeaturesItem>
-    <FeaturesItem title="Database">
-      massCode uses a simple JSON to store your data. The database files are
-      on your local computer.
+
+    <FeaturesItem title="JSON Visualizer">
+      Visualize and explore your JSON data with an interactive graph view. Perfect for quickly inspecting complex responses, APIs, or configuration files.
     </FeaturesItem>
     <FeaturesItem title="Integrations">
-      massCode supports extensions for
-      <AppLink href="https://marketplace.visualstudio.com/items?itemName=AntonReshetov.masscode-assistant">
-        VS Code
-      </AppLink>,
-      <AppLink href="https://www.raycast.com/antonreshetov/masscode">
-        Raycast
-      </AppLink>
-      and
-      <AppLink href="https://github.com/massCodeIO/assistant-alfred">
-        Alfred
-      </AppLink>, which gives even more possibilities to use application. With the VS
-      Code extension you get practically zen mode, search for the necessary
-      snippets and insert them immediately or save the selected code sections
-      as a snippet.
+      Extend your workflow with:
+      <ul>
+        <li>
+          <AppLink href="https://marketplace.visualstudio.com/items?itemName=AntonReshetov.masscode-assistant">
+            VS Code Extension
+          </AppLink>: zen mode snippet search, instant insertion, and save selected code as snippets.
+        </li>
+        <li>
+          <AppLink href="https://www.raycast.com/antonreshetov/masscode">
+            Raycast Extension
+          </AppLink>: quick snippet access directly from Raycast.
+        </li>
+      </ul>
     </FeaturesItem>
-    <FeaturesItem title="Screenshots">
-      Create beautiful snippet images on different backgrounds and in
-      different modes.
+    <FeaturesItem
+      title="Beautiful Screenshots"
+    >
+      Export snippets as polished images with customizable themes and backgrounds.
     </FeaturesItem>
-    <FeaturesItem title="Localization">
+    <FeaturesItem
+      title="Localization"
+    >
       massCode is available in Čeština, Deutsch, Ελληνικά, English, Español, French, 日本語,
       Português (Brasil), Română, Русский, Türkçe, Українська,
       中文 (简体), 中文 (繁體) & 中文 (繁體 香港特別行政區) languages.

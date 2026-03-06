@@ -40,12 +40,21 @@ const {
 
   <h2>Windows</h2>
 
-  <VPButton
-    :href="assets.win"
-    theme="brand"
-    text="Download for Windows"
-    @click="onShowDialog"
-  />
+  <div style="display: flex; gap: 12px">
+    <VPButton
+      :href="assets.win"
+      theme="brand"
+      text="Download for Windows"
+      @click="onShowDialog"
+    />
+
+    <VPButton
+      :href="assets.winPortable"
+      theme="brand"
+      text="Download for Windows (portable)"
+      @click="onShowDialog"
+    />
+  </div>
 
   <p>Windows 10, 11</p>
 

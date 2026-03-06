@@ -37,18 +37,6 @@ Follow one of the following steps:
 - Select **"Editor"** > **"Copy Snippet to Clipboard"** from the menu bar.
 - Press <kbd>Shift+Cmd+C</kbd> on macOS or <kbd>Shift+Ctrl+C</kbd> on Windows or Linux.
 
-## Hiding Snippets from Subfolders
-
-<AppVersion text=">=3.7" />
-
-Select **"View"** > **"Hide Subfolder Snippets"** from the menu bar.
-
-## Compact Mode
-
-<AppVersion text=">=3.7" />
-
-Select **"View"** > **"Compact Mode"** from the menu bar.
-
 ## Formatting Snippet
 
 Snippet formatting makes the snippet code formatted.
@@ -83,4 +71,12 @@ Follow these steps:
 - Add new [snippet](#adding-a-snippet) or select already created.
 - Add second [fragment](/documentation/fragments.html).
 - Select for fragments HTML & CSS languages.
-- Select **"Editor"** > **"Preview Code"** from the menu bar or press <kbd>Shift+Cmd+P</kbd> on macOS or <kbd>Shift+Ctrl+P</kbd> on Windows or Linux.
+- Select **"Editor"** > **"Preview Code"** from the menu bar or press <kbd>Alt+Cmd+P</kbd> on macOS or <kbd>Ctrl+Alt+P</kbd> on Windows or Linux.
+
+## JSON Visualizer
+
+<AppVersion text=">=4.1" />
+
+- Add new [snippet](#adding-a-snippet) or select already created.
+- Click on the language selector located at the bottom left of the editor panel, and choose **"JSON"** from the drop-down list.
+- Select **"Editor"** > **"Preview JSON"** from the menu bar or press <kbd>Alt+Cmd+J</kbd> on macOS or <kbd>Ctrl+Alt+J</kbd> on Windows or Linux.

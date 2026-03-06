@@ -8,7 +8,6 @@ massCode provides developers with a range of convenient tools, such as:
 
 - Case Converter
 - Slug Generator
-- Sort Lines
 - URL Parser
 
 ## Cryptography & Security
@@ -22,3 +21,6 @@ massCode provides developers with a range of convenient tools, such as:
 
 - URL
 - Base64
+- JSON ⇄ TOML/XML/YAML
+- Text ⇄ ASCII/Binary/Unicode
+- Color Converter

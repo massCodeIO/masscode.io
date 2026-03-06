@@ -44,6 +44,7 @@
     "gray-matter": "^4.0.3",
     "handlebars": "^4.7.8",
     "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
     "sass": "^1.89.2",
     "simple-git-hooks": "^2.13.0",
     "typescript": "^5.8.3",
