@@ -2,48 +2,27 @@
 title: Latest Release
 ---
 
-# v4.5.0
+# v4.6.0
 
-## Markdown Vault — New Storage Engine
+## Math Notebook
 
-This is arguably the most significant update in massCode&#x27;s history. You can now store your snippets as plain Markdown files directly on disk.
+A new feature — a calculator notepad right inside massCode, inspired by [Numi](https://numi.app). Write expressions in natural language and get instant results on each line.
 
-**Why it matters:**
+### Features
 
-- **Your data is just files.** Each snippet is a &#x60;.md&#x60; file with frontmatter metadata. No database, no binary formats. You can read, edit, and organize snippets with any text editor or file manager.
-- **Git-friendly.** Store snippets in a Git repository, sync via GitHub, track change history — everything works out of the box because it&#x27;s just files.
-- **Cloud sync.** iCloud, Dropbox, Syncthing — any file sync service will do. No database conflicts.
-- **Live sync.** massCode watches the vault directory in real time via a file watcher. Edit a file externally — the app picks up changes automatically.
-
-**How it works:**
-
-The vault structure mirrors your folder hierarchy. Each folder is a directory on disk, each snippet is a &#x60;.md&#x60; file inside it. Metadata (language, tags, order) is stored in frontmatter, while &#x60;.state.json&#x60; handles UI state (expanded folders, sort order).
-
-You can switch between SQLite and Markdown Vault in Settings → Storage.
-
-## Custom Themes
-
-Added support for custom themes. You can now fully customize the look and feel of massCode — UI colors, editor syntax highlighting colors.
-
-- Themes are stored in &#x60;~/.massCode/themes/&#x60; as JSON files
-- Create a new theme directly from settings — a Rose Pine-based template will be generated
-- Both light and dark theme types are supported
-- Theme files are watched in real time — edit the JSON, see the result instantly
+- Arithmetic, percentages, powers, math functions (&#x60;sqrt&#x60;, &#x60;sin&#x60;, &#x60;log&#x60;...)
+- Natural syntax: &#x60;15% of 200&#x60;, &#x60;5% off 300&#x60;, &#x60;sqrt 16&#x60;
+- Variables &amp; aggregates: &#x60;price &#x3D; $50 + $10&#x60;, &#x60;sum&#x60;, &#x60;average&#x60;, &#x60;prev&#x60;
+- Unit conversion: length, weight, temperature, time, area, volume, data, CSS (&#x60;px&#x60;, &#x60;pt&#x60;, &#x60;em&#x60;)
+- 28 currencies with live rates: &#x60;$100 to RUB&#x60;, &#x60;€50 + £20&#x60;
+- Date &amp; time: &#x60;now&#x60;, &#x60;time in Tokyo&#x60;, &#x60;tomorrow + 2 weeks&#x60;
+- Syntax highlighting, sheet management, click-to-copy results, total
 
 ## What&#x27;s Changed
 
-- fix(snippets): resolve default language correctly for nested folders by @antonreshetov in https://github.com/massCodeIO/massCode/pull/657
-- feat(folder): add default language indication by @antonreshetov in https://github.com/massCodeIO/massCode/pull/659
-- fix(snippets): language mode search by @antonreshetov in https://github.com/massCodeIO/massCode/pull/665
-- feat: add markdown vault as storage engine by @antonreshetov in https://github.com/massCodeIO/massCode/pull/671
-- feat: add support custom themes by @antonreshetov in https://github.com/massCodeIO/massCode/pull/672
-- feat: Add OpenEdge ABL language support by @DGovender in https://github.com/massCodeIO/massCode/pull/670
-- feat: add Nushell language support by @archcorsair in https://github.com/massCodeIO/massCode/pull/663
+- feat: add math notebook by @antonreshetov in https://github.com/massCodeIO/massCode/pull/677
+- fix(editor): use configured tab size for block indentation by @antonreshetov in https://github.com/massCodeIO/massCode/pull/678
+- fix(editor): prevent md-engine text overwrite during rapid typing by @antonreshetov in https://github.com/massCodeIO/massCode/pull/679
 
-## New Contributors
-
-- @DGovender made their first contribution in https://github.com/massCodeIO/massCode/pull/670
-- @archcorsair made their first contribution in https://github.com/massCodeIO/massCode/pull/663
-
-**Full Changelog**: https://github.com/massCodeIO/massCode/compare/v4.4.0...v4.5.0
+**Full Changelog**: https://github.com/massCodeIO/massCode/compare/v4.5.0...v4.6.0
 <AssetsDownload />
