@@ -64,6 +64,12 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Math',
+          items: [
+            { text: 'Math Notebook', link: '/documentation/math-notebook.md' },
+          ],
+        },
+        {
           text: 'Tools',
           items: [
             { text: 'Developers Tools', link: '/documentation/devtools.md' },
